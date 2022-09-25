@@ -11,10 +11,10 @@ class Car:
         print('llamando metodo get marca')
         return self._marca
 
-    @marca.setter #@(atribute_name.setter)
-    def marca(self, marca):
-        print('llamando metodo set marca')
-        self._marca = marca
+    #@marca.setter #@(atribute_name.setter)
+    #def marca(self, marca):
+    #    print('llamando metodo set marca')
+    #    self._marca = marca
 
     def mostrar_detalle(self):
         print(f'Car: {self._marca} {self._modelo} {self._precio}, {self._color}')
