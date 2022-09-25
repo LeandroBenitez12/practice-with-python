@@ -34,7 +34,10 @@ class Car:
     def mostrar_detalle(self):
         print(f'Car: {self._marca} {self._modelo} {self._precio}, {self._color}')
 
-Car_c1 = Car('car Segment A','reno','clio', 1500000, 'gray')
+    def __del__(self):
+        print(f'Car eliminated: {self._marca} {self._modelo}')
+
+#Car_c1 = Car('car Segment A','reno','clio', 1500000, 'gray')
 Truck = Car('Truck','Mercedes Benz','Atego', 12345554300, 'brown')
 
 #Car_c1.marca = 'Mercedes'
@@ -42,14 +45,12 @@ Truck = Car('Truck','Mercedes Benz','Atego', 12345554300, 'brown')
 #Car_c1.precio = 12121314
 #Car_c1.color = 'yelou'
 
-
-
 #Car_c1.mostrar_detalle()
 #clase 96
 
-Car_c1.Dueño = 'carlitos'
+"""Car_c1.Dueño = 'carlitos'
 if __name__ == '__main__':
     print(__name__)
     Truck.mostrar_detalle()
-    print(Car_c1.precio)#recuperamos private get 
+    print(Car_c1.precio)#recuperamos private get """
 
