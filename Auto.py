@@ -41,10 +41,15 @@ Truck = Car('Truck','Mercedes Benz','Atego', 12345554300, 'brown')
 #Car_c1.modelo = 'm1b'
 #Car_c1.precio = 12121314
 #Car_c1.color = 'yelou'
-print(Car_c1.precio)#recuperamos private get 
+
 
 
 #Car_c1.mostrar_detalle()
 #clase 96
 
 Car_c1.Dueño = 'carlitos'
+if __name__ == '__main__':
+    print(__name__)
+    Truck.mostrar_detalle()
+    print(Car_c1.precio)#recuperamos private get 
+
