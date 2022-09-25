@@ -1,8 +1,8 @@
 class Cubo:
     def __init__(self, ancho, alto, profundo):
-        self.ancho = ancho
-        self.alto = alto
-        self.profundo = profundo   
+        self._ancho = ancho
+        self._alto = alto
+        self._profundo = profundo   
 
     def CalcularVolume(self):
         return self.ancho* self.alto * self.profundo
