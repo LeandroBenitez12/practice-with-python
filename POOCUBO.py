@@ -13,4 +13,4 @@ Profundidad = int(input ("Ingrese la profundidad del Cubo: "))
 
 Cubo_1 = Cubo(Ancho, Alto, Profundidad)
 
-print (f"el volumen del cubo es: {Cubo_1.CalcularVolume()}"4)
+print (f"el volumen del cubo es: {Cubo_1.CalcularVolume()}")
