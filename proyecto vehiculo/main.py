@@ -2,8 +2,8 @@ from Vehicle import *
 from car import *
 from Cleta import *
 
-car1 = car(82, "azul ", 4)
-Cleta1= Cleta("Mounting bikes", "Verde", 2)
+car1 = car("azul ", 4, 18)
+Cleta1= Cleta("Verde", 2, "Mounting bikes")
 
 print(car1)
 print(Cleta1)
