@@ -1,5 +1,7 @@
 import turtle 
 import time
+import random
+
 posponer= 0.12
 recorrido = 20
 minimoArea= 290
@@ -16,9 +18,9 @@ cabeza.speed(0)
 cabeza.shape('square')
 cabeza.color('white')
 cabeza.penup()
-cabeza.goto(100,0)
+cabeza.goto(20,0)
 cabeza.direction = 'stop'
-
+'''
 cabeza2 = turtle.Turtle()
 cabeza2.speed(0)
 cabeza2.shape('square')
@@ -26,6 +28,14 @@ cabeza2.color('red')
 cabeza2.penup()
 cabeza2.goto(-100,0)
 cabeza2.direction = 'stop'
+'''
+comida = turtle.Turtle()
+comida.speed(0)
+comida.shape('circle')
+comida.color('yellow')
+comida.penup()
+comida.goto(0,100)
+
 
 def forward1():
     cabeza.direction = 'forward'
@@ -38,7 +48,7 @@ def left1():
 
 def right1():
     cabeza.direction = 'right'
-
+'''
 def forward2():
     cabeza2.direction = 'forward'
 
@@ -50,7 +60,7 @@ def left2():
 
 def right2():
     cabeza2.direction = 'right'
-
+'''
 def mov():
     if cabeza.direction == 'forward':
         y = cabeza.ycor()
@@ -74,7 +84,7 @@ def mov():
     if cabeza.xcor() > minimoArea or cabeza.xcor() < -minimoArea:
         cabeza.direction = 'stop'
 
-def mov2():
+'''def mov2():
     if cabeza2.direction == 'forward':
         y = cabeza2.ycor()
         cabeza2.sety(y + recorrido)
@@ -96,21 +106,28 @@ def mov2():
     
     if cabeza2.xcor() > minimoArea or cabeza2.xcor() < -minimoArea:
         cabeza2.direction = 'stop'
-
+'''
 #teclado
 ventana.listen()
 ventana.onkeypress(forward1, 'Up')
 ventana.onkeypress(backward1, 'Down')
 ventana.onkeypress(left1, 'Left')
 ventana.onkeypress(right1, 'Right')
+
+'''
 ventana.onkeypress(forward2, 'w')
 ventana.onkeypress(backward2, 's')
 ventana.onkeypress(left2, 'a')
 ventana.onkeypress(right2, 'd')
-
+'''
 while True:
     ventana.update()
 
+    if cabeza.distance(comida) < 20:
+        x = random.randint(-280, 280)
+        y = random.randint(-280, 280)
+        comida.goto(x,y)
+        
     mov()
-    mov2()
+    #mov2()
     time.sleep(posponer)
