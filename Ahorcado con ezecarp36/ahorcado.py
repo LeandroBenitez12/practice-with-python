@@ -60,7 +60,7 @@ def run():
       |-¬ |
      / \  |
     =========''']
-    equipoFulbo = [BOCA, RIVER, GIMNASIA, SANSILENCIO, INDESINGENTE, RASINCOPA]
+    equipoFulbo = ['BOCA', 'RIVER', 'GIMNASIA', 'SANSILENCIO', 'INDESINGENTE', 'RASINCOPA']
     equipoAdivinar = random.choice(equipoFulbo)
 
     guioncito = '_'
@@ -70,31 +70,31 @@ def run():
     while True:
         os.system("cls")
         for character in guiones:
-            print(f"{guiones} ")
+            print(character, end = ' ')
         print(VIDAS[intentos])
         letraIngresada = str(
-            input("Ingresa una letra pedazo de gorreado")).upper()
+            input("Ingresa una letra pedazo de gorreado:  ")).upper()
 
-    encontreLetra = False
-    for idx, character in enumerate(equipoFulbo):
-        if character == letraIngresada:
-            guiones[idx] = letraIngresada
-            encontreLetra = True
+        encontreLetra = False
+        for idx, character in enumerate(equipoAdivinar):
+            if character == letraIngresada:
+                guiones[idx] = letraIngresada
+                encontreLetra = True
 
-    if not encontreLetra:
-        intentos -= 1
+        if not encontreLetra:
+            intentos -= 1
 
-    if guioncito not in guiones:
-        os.system("clear")
-        print('GANE')
+        if guioncito not in guiones:
+            os.system("cls")
+            print('GANE')
+            break
+            input()
         
-        input()
-    if intentos == 0:
-        os.system("clear")
-        print('Descendiste B|')
-        
-        input()
+        if intentos == 0:
+            os.system("cls")
+            print('Descendiste B|')
+            break
+            input()
 
 
-if __name__ == 'main':
-    run()
+run()
