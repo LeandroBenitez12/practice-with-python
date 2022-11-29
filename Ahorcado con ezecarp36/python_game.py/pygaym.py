@@ -1,69 +1,66 @@
+#importando librerias
 import turtle 
 import time
 import random
 
+#constantes y variables
 posponer= 0.12
 recorrido = 20
 minimoArea= 290
+cuerpos = []
+distanciaAlimentacion = 20
 
-
+#creando la pantalla del juego
 ventana =  turtle.Screen()
 ventana.title('Game of python')
 ventana.bgcolor('black')
 ventana.setup( width = 600, height= 600)
 ventana.tracer(0)
 
+#creando la cabeza de la serpiente
 cabeza = turtle.Turtle()
 cabeza.speed(0)
 cabeza.shape('square')
-cabeza.color('white')
+cabeza.color('yellow')
 cabeza.penup()
 cabeza.goto(0,0)
 cabeza.direction = 'stop'
 
-cuerpos = []
-
-'''
-cabeza2 = turtle.Turtle()
-cabeza2.speed(0)
-cabeza2.shape('square')
-cabeza2.color('red')
-cabeza2.penup()
-cabeza2.goto(-100,0)
-cabeza2.direction = 'stop'
-'''
+#creando la comida de la serpiente
 comida = turtle.Turtle()
 comida.speed(0)
 comida.shape('circle')
-comida.color('yellow')
+comida.color('red')
 comida.penup()
 comida.goto(0,100)
 
+#marcadores
+score = 0
+highscore = 0
 
-def forward1():
+#genero el texto del marcador
+texto = turtle.Turtle()
+texto.speed(0)
+texto.color('white')
+texto.penup()
+texto.hideturtle()
+texto.goto(0,260)
+texto.write('score: 0     High Score:  0 ', 
+    align= "center", font=('courier', 18, 'normal'))
+
+def forward():
     cabeza.direction = 'forward'
 
-def backward1():
+def backward():
     cabeza.direction = 'backward'
 
-def left1():
+def left():
     cabeza.direction = 'left'
 
-def right1():
+def right():
     cabeza.direction = 'right'
-'''
-def forward2():
-    cabeza2.direction = 'forward'
-
-def backward2():
-    cabeza2.direction = 'backward'
-
-def left2():
-    cabeza2.direction = 'left'
-
-def right2():
-    cabeza2.direction = 'right'
-'''
+#--------------------------------------------------------------------------------------------
+#funcion del movimiento de la serpiente
 def mov():
     if cabeza.direction == 'forward':
         y = cabeza.ycor()
@@ -87,80 +84,96 @@ def mov():
     if cabeza.xcor() > minimoArea or cabeza.xcor() < -minimoArea:
         cabeza.direction = 'stop'
 
-'''def mov2():
-    if cabeza2.direction == 'forward':
-        y = cabeza2.ycor()
-        cabeza2.sety(y + recorrido)
-
-    if cabeza2.direction == 'backward':
-        y = cabeza2.ycor()
-        cabeza2.sety(y - recorrido)
-
-    if cabeza2.direction == 'right':
-        x = cabeza2.xcor()
-        cabeza2.setx(x + recorrido)
-
-    if cabeza2.direction == 'left':
-        x = cabeza2.xcor()
-        cabeza2.setx(x - recorrido)
-
-    if cabeza2.ycor() > minimoArea or cabeza2.ycor() < -minimoArea:
-        cabeza2.direction = 'stop'
-    
-    if cabeza2.xcor() > minimoArea or cabeza2.xcor() < -minimoArea:
-        cabeza2.direction = 'stop'
-'''
-#teclado
+#configurando teclas para mover a la serpiente
 ventana.listen()
-ventana.onkeypress(forward1, 'Up')
-ventana.onkeypress(backward1, 'Down')
-ventana.onkeypress(left1, 'Left')
-ventana.onkeypress(right1, 'Right')
+ventana.onkeypress(forward, 'Up')
+ventana.onkeypress(backward, 'Down')
+ventana.onkeypress(left, 'Left')
+ventana.onkeypress(right, 'Right')
 
-'''
-ventana.onkeypress(forward2, 'w')
-ventana.onkeypress(backward2, 's')
-ventana.onkeypress(left2, 'a')
-ventana.onkeypress(right2, 'd')
-'''
+#juego en si
 while True:
+    
+    #inicializamos ventana
     ventana.update()
-    #choques
+
+    #choques contra los bordes
     if cabeza.xcor() > 280 or cabeza.ycor() < -280 or cabeza.ycor() > 280 or cabeza.xcor() < -280:
         time.sleep(1)
         cabeza.goto(0,0)
         cabeza.direction = 'stop'
 
+        #manda al cuerpo de la serpiente lejos 
         for cuerpo in cuerpos:
             cuerpo.goto(1000,1000)
 
+        #limpia los cuerpos
         cuerpos.clear()
-    
-    if cabeza.distance(comida) < 20:
+        
+        #resetear marcador
+        score = 0
+        texto.clear()
+        texto.write('score: {}     High Score: {}'.format(score,highscore), 
+    align= "center", font=('courier', 24, 'normal'))
+
+    #serpiente se alimenta
+    if cabeza.distance(comida) < distanciaAlimentacion:
         x = random.randint(-280, 280)
         y = random.randint(-280, 280)
         comida.goto(x,y)
-
+        #aumenta los puntos
+        score += 10
         
-
+        #genera nuevo cuerpo
         nuevoCuerpo = turtle.Turtle()
         nuevoCuerpo.speed(0)
         nuevoCuerpo.shape('square')
-        nuevoCuerpo.color('grey')
+        nuevoCuerpo.color('blue')
         nuevoCuerpo.penup()
         cuerpos.append(nuevoCuerpo)
- 
-    #mover el corp the python
+
+    #si hay nuevo record se reemplaza
+    if score > highscore :
+        highscore = score
+
+    #texto para el tablero
+    texto.clear()
+    texto.write('score: {}     High Score: {}'.format(score,highscore), 
+    align= "center", font=('courier', 24, 'normal'))
+
+    #mover el cuerpo the python
     totalCuerpos = len(cuerpos)
     for index in range(totalCuerpos -1, 0, - 1):
         x = cuerpos[index -1].xcor()
         y = cuerpos[index -1].ycor()
         cuerpos[index].goto(x,y)
-
     if totalCuerpos > 0:
         x = cabeza.xcor()
         y = cabeza.ycor()
         cuerpos[0].goto(x,y)
+
+    #invoco a la funcion para que se mueva
     mov()
-    #mov2()
+
+    #colisiones con el cuerpo
+    for cuerpo in cuerpos:
+        if cuerpo.distance(cabeza) < 20:
+            time.sleep(1)
+            cabeza.goto(0,0)
+            cabeza.direction = 'stop'
+
+            #manda al cuerpo de la serpiente lejos 
+            for cuerpo in cuerpos:
+                cuerpo.goto(1000,1000)
+                
+            #limpia los cuerpos
+            cuerpos.clear()
+
+            #resetear marcador
+            score = 0
+            texto.clear()
+            texto.write('score: {}     High Score: {}'.format(score,highscore), 
+                align= "center", font=('courier', 24, 'normal'))
+
+
     time.sleep(posponer)
