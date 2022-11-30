@@ -8,3 +8,7 @@ print((f' el ancho del square :  {SquareGreen.ancho}' ))
 print((f' el alto del square :  {SquareGreen.alto}' ))
 print((f' el color del square :  {SquareGreen.color}' ))
 print(f'the calculo del area del square: {SquareGreen.calcularArea()} ')
+
+#MRO = method resolution order 
+MRO = Cuadrado.mro()   
+print(MRO)
