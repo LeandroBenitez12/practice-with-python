@@ -1,9 +1,14 @@
 class Color:
     def __init__(self, color):
-        self.color = color
+        self._color = color
 
-    def get_color():
-        color = str(input('Insert Color: '))
+    @property #decorador , modifica el metodo para solo acceder al atributo atravez del metodo, tipo te hace ahorrar los '()'
+    def color(self):
+        return self._color
     
-    def set_color(color):
-        return print('the color is:  {color}')
+    @color.setter #metodo de tipo set asociado a ese atributo
+    def color(self, color):
+        self._color = color
+
+    def __str__(self):
+        return f'The color is:  {self._color}'
