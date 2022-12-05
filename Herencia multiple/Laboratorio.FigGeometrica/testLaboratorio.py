@@ -19,3 +19,5 @@ Rectangle = Rectangulo(height= 4, width= 2,  color= 'Red')#autodocumentamos codi
 Rectangle.height = 14
 print(f'The calculate area is {Rectangle.calculate_Area()}')
 print(Rectangle)
+
+#print(Cuadrado.mro())# se modifica el mro porque agragamos la clase abstract
