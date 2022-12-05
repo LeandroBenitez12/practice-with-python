@@ -6,7 +6,7 @@ class Cuadrado(FiguraGeometrica, Color  ):
         FiguraGeometrica.__init__(self , lado, lado)
         Color.__init__(self , color)
         
-    def calcularArea(self):
+    def calculate_Area(self):# AGREMAMOS IMPLEMENTACION DEL METODO ABSTRACT
         return self.height * self.width
     
     def __str__(self):
