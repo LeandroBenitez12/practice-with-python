@@ -2,8 +2,8 @@ from Color import Color
 from FiguraGeometrica import FiguraGeometrica
 
 class Rectangulo (FiguraGeometrica, Color ):
-    def __init__(self, h, base, color):
-        FiguraGeometrica.__init__(self , h, base)
+    def __init__(self, height, width, color):
+        FiguraGeometrica.__init__(self , height, width)
         Color.__init__(self , color)
     
     def calcularArea(self):

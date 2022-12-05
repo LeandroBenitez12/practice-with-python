@@ -1,6 +1,6 @@
 class FiguraGeometrica:
     def __init__(self, width , height):
-        
+        #validate if the variable width or height is less than 50
         if 0 <= width < 50:
             self._width = width
         else:
