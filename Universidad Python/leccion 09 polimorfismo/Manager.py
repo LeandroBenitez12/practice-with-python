@@ -6,4 +6,4 @@ class Manager(Employee):
         self._department = department
 
     def __str__(self):
-        return f'The Manager: Department [ {self._department}]{super().__str__()}'
+        return f'{super().__str__()}, He/She is a Manager and is in the Department of: [{self._department}]'
