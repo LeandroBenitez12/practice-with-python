@@ -2,7 +2,8 @@ from Employee import Employee
 from Manager import Manager
 
 def print_detail(object):
-    
+    #esto es un metodo generico,
+    #podriamos preguntar si el metodo es de cierta instancia pero en python no es recomdable ya que no es bueno estar validando muchos datos
     print(type(object))
     print(object.show_detail())
     if isinstance(object, Manager):
