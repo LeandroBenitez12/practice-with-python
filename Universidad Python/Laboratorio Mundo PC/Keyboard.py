@@ -15,3 +15,13 @@ class Keyboard(inputDevice):
     
     def __str__(self):
         return f' the keyboard id [ {self.__idkeyboard}], {super().__str__()}'
+
+if __name__ == '__main__':
+    Keyboard1 = Keyboard('AT', 'CHERRY')
+    Keyboard14 = Keyboard('ATe', 'CHERRY')
+    Keyboard13 = Keyboard('ATa', 'CHERRY')
+    Keyboard23 = Keyboard('ATg', 'CHERRY')
+    Keyboard2 = Keyboard('ATt', 'CHERRY')
+    Keyboard10 = Keyboard('AT', 'CHERRY')
+
+    print(Keyboard1)

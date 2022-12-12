@@ -30,4 +30,9 @@ if __name__ == '__main__':
     Display1 = Display('PHILIPS', '1024 x 1050')
     Computer1 = Computer('GABRIEL', Mouse1, Keyboard1, Display1)
 
-    print(Computer1)
+    Mouse2  = Mouse('USB 2.0', 'Genius')
+    Keyboard2 = Keyboard('USB 3.0', 'Logitech')
+    Display2 = Display('PHILIPS', '2024 x 2050')
+    Computer2 = Computer('Leandro', Mouse2, Keyboard2, Display2)
+
+    print(Computer2)

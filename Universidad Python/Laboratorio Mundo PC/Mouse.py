@@ -16,5 +16,10 @@ class Mouse(inputDevice):
         return f' the mouse id [ {self.__idmouse}], {super().__str__()}'
 
     
+if __name__ == '__main__':
 
+    Mouse1= Mouse('USB', 'GADNIC')
+    Mouse2= Mouse('txt', 'jst')
+
+    print(Mouse1)
     
