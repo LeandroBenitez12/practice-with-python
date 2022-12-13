@@ -2,8 +2,8 @@ result = None #No tiene value aun, TIENE QUE ESTAR ANTES DEL TRY PARA SER UTILIZ
 # SI es declarada dentro del try luego va a salir error si entra en una excepcion como que la var no esta declarada
 
 try:
-    a = '10'
-    b = 0
+    a = int(input('Write the first integer: '))
+    b = int(input('Write the second integer: '))
     result = a/b
 except ZeroDivisionError as z:#la clase ZeroDivisionError es una clase hija 
     #, una sub clase digamos, si nosotros utilizamos Exception que es la clase padre,
@@ -16,6 +16,9 @@ except TypeError as t:
 
 except Exception as e:
     print(f'Exception - Error processing: {e}, {type(e)}')
-
+else: 
+    print('No Se dio ninguna except')
+finally:
+    print('Ejecting block finally ')
 print(f'The Result is: {result}')
 print('CONTINUAMOS...')
