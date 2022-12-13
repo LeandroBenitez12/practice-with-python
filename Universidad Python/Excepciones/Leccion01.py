@@ -1,3 +1,5 @@
+from numerosIdenticos import numerosIdenticos
+
 result = None #No tiene value aun, TIENE QUE ESTAR ANTES DEL TRY PARA SER UTILIZADO LASOLUCION DE LA EXCEPCION COMO TAL
 # SI es declarada dentro del try luego va a salir error si entra en una excepcion como que la var no esta declarada
 
@@ -5,6 +7,8 @@ try:
     a = int(input('Write the first integer: '))
     b = int(input('Write the second integer: '))
     result = a/b
+    if a == b :
+        raise numerosIdenticos('Equal Numbers')
 except ZeroDivisionError as z:#la clase ZeroDivisionError es una clase hija 
     #, una sub clase digamos, si nosotros utilizamos Exception que es la clase padre,
     #ante cualquier error nosotros acutuamos protegiendo de la interrupcion de la app e informando el error
