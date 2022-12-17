@@ -1,11 +1,8 @@
-from Pelicula import Pelicula
 from Add_recursos import Add_recursos
 import os 
-class CatalogoPeliculas(Pelicula):
-    rutaArchive = 'Peliculas.txt'
-    def __init__(self, Pelicula):
-        super().__init__(Pelicula)
-        Pelicula.__init__(Pelicula)
+class CatalogoPeliculas:
+    rutaArchive = 'D:\\GIT\\Course Phyton\\Universidad Python\\LABORATORIO CINE\\CATALOGO_PELICULAS\\CATALOGO_PELICULAS.txt'
+    
     @classmethod
     def addMovie(cls, pelicula):
         with Add_recursos(cls.rutaArchive , 'a') as archivo:
