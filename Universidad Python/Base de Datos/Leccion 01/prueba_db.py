@@ -7,8 +7,13 @@ try:
         #cursor es un obejto que nos permite ejecutar sentencias SQL en postgres
         with conexion.cursor() as cursor:
             sentencia = 'INSERT INTO persona (name, surname, email) VALUES (%s, %s, %s)'
-            valores= ('Carlos', 'JEQUE', 'Jequec@live.com') #tupla de valores
-            cursor.execute(sentencia, valores)
+            valores= (
+                ('Julio', 'ramones', 'bokec@type.com'),
+                ('Gabriel', 'romero', 'sahac@meil.com'),
+                ('Ezequiel', 'briasco', 'Jyn@hotmail.com'),
+            ) #tuplas de tupla valores
+
+            cursor.executemany(sentencia, valores)
             #conexion.commit()  GUARDA REGISTRO EN BASE DE DATOS
             registros_insert = cursor.rowcount
             print(f'Registros insertados: {registros_insert}')
