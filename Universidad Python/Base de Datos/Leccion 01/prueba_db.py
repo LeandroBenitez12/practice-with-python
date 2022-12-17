@@ -6,14 +6,14 @@ try:
     with conexion:  #para asegurar que se cierre cualquier recuerso asociado a conecion se cierre
         #cursor es un obejto que nos permite ejecutar sentencias SQL en postgres
         with conexion.cursor() as cursor:
-            sentencia = ' UPDATE persona SET name =%s, surname = %s, email = %s WHERE id_persona = %s'
-            primeros_valores = input('Ingrese las modificaciones (separada por coma):   ')
-            valores = tuple(primeros_valores.split(','))
+            sentencia = 'DELETE FROM persona WHERE id_persona IN %s '
+            primeros_valores = input('ingrese los registros ha eliminar:    ')
+            valores = (tuple(primeros_valores.split(',')),)
             #valores = ('Juan', 'Miguez', 'juansvae@gamil.com', 5)
             cursor.execute(sentencia, valores)
             #conexion.commit()  GUARDA REGISTRO EN BASE DE DATOS
-            registros_modified = cursor.rowcount
-            print(f'Registros modificados: {registros_modified}')
+            registros_delete = cursor.rowcount
+            print(f'Registros eliminados: {registros_delete}')
 
 except Exception as e:
     print(f'Error by {e}')
@@ -32,3 +32,35 @@ finally:
                 ('Ezequiel', 'briasco', 'Jyn@hotmail.com'),
             ) #tuplas de tupla valores
 '''
+
+#MODIFIED VARIOUS REGISTERS
+'''sentencia = ' UPDATE persona SET name =%s, surname = %s, email = %s WHERE id_persona = %s'
+            condicion = int(input(
+            Ingrese:
+             1 para una sola modificacion
+             2 para dos nuevas modificaciones
+             3 para tres nuevas modificaciones
+             ...    ))
+            if condicion == 1:
+                primeros_valores = input('Ingrese las modificaciones (separada por coma):   ')
+                valores = tuple(primeros_valores.split(','))
+            if condicion == 2:
+                primeros_valores = input('Ingrese las modificaciones (separada por coma):   ')
+                segundos_valores = input('Ingrese las modificaciones (separada por coma):   ')
+                valores = (
+                    tuple(primeros_valores.split(',')),
+                    tuple(segundos_valores.split(',')),
+                )
+
+            if condicion == 3:
+                primeros_valores = input('Ingrese las modificaciones (separada por coma):   ')
+                segundos_valores = input('Ingrese las modificaciones (separada por coma):   ')
+                terceros_valores = input('Ingrese las modificaciones (separada por coma):   ')
+                valores = (
+                    tuple(primeros_valores.split(',')),
+                    tuple(segundos_valores.split(',')),
+                    tuple(terceros_valores.split(',')),
+                )
+            #valores = ('Juan', 'Miguez', 'juansvae@gamil.com', 5)
+            cursor.executemany(sentencia, valores)
+            #conexion.commit()  GUARDA REGISTRO EN BASE DE DATOS'''
