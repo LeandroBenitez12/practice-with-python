@@ -1,6 +1,6 @@
 import psycopg2
 
-conexion = psycopg2.connect(user='postgres', password='admin', host='127.0.0.1', port='5432', database='test_db')
+conexion = psycopg2.connect(user='postgres1', password='admin', host='127.0.0.1', port='5432', database='test_db')
 #print(conexion)
 try:
     with conexion:  #para asegurar que se cierre cualquier recuerso asociado a conecion se cierre
