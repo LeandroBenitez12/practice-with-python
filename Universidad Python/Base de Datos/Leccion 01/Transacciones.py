@@ -4,21 +4,20 @@ conexion = bd.connect(user='postgres', password='admin', host='127.0.0.1', port=
 #print(conexion)
 
 try:
-    conexion.autocommit = False    #valor default, pero lo agregamos popr las dudas
-    cursor = conexion.cursor()
-    sentencia = 'INSERT INTO persona (name, email) VALUES(%s, %s)'
-    valores = ('Leandro', 'Leanbenitz@gmail.com')
-    cursor.execute(sentencia, valores)
+    with conexion:
+        with conexion.cursor() as cursor:
+            sentencia = 'INSERT INTO persona (name, surname, email) VALUES(%s, %s, %s)'
+            valores = ('ZUKITA',  'FEBALLIONE', 'ZUKI78@gmial.com')
+            cursor.execute(sentencia, valores)
 
-    sentencia = 'UPDATE persona SET name=%s, email = %s WHERE id_persona = %s'
-    valores = ('josema', 'Jimenes@gmail.com', 43)
-    cursor.execute(sentencia, valores)
+            sentencia = 'UPDATE persona SET  name = %s  WHERE id_persona = %s'
+            valores = ( 'FAFAFAFAFAFFA' , 48)
+            cursor.execute(sentencia, valores)
 
-    conexion.commit()
-    print('Termino la transacción, se hizo commit ')
 except Exception as e:
-    conexion.rollback()
     print(f'Error by, se hizo rollback, {e}')
 finally:
     #ahora cerramos la conexion
     cursor.close()
+
+print('Termino la transacción, se hizo commit ')
