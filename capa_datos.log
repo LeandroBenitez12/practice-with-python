@@ -1,0 +1,31 @@
+11:58:05 PM: DEBUG [Logger_base.py]: 17 Mensaje a nivel DEBUG
+11:58:05 PM: INFO [Logger_base.py]: 18 Mensaje a nivel info
+11:58:05 PM: ERROR [Logger_base.py]: 19 Mensaje a nivel Error
+11:58:05 PM: WARNING [Logger_base.py]: 20 Mensaje a nivel warning
+11:58:05 PM: CRITICAL [Logger_base.py]: 21 Mensaje a nivel critical
+11:58:12 PM: DEBUG [Person.py]: 40 The ID [3], is Juan Perez, email: jperez@gmail.com
+11:58:37 PM: DEBUG [Person.py]: 40 The ID [3], is Juan Perez, email: jperez@gmail.com
+11:59:21 PM: DEBUG [Logger_base.py: 17] Mensaje a nivel DEBUG
+11:59:21 PM: INFO [Logger_base.py: 18] Mensaje a nivel info
+11:59:21 PM: ERROR [Logger_base.py: 19] Mensaje a nivel Error
+11:59:21 PM: WARNING [Logger_base.py: 20] Mensaje a nivel warning
+11:59:21 PM: CRITICAL [Logger_base.py: 21] Mensaje a nivel critical
+11:59:47 PM: DEBUG [Person.py: 40] The ID [3], is Juan Perez, email: jperez@gmail.com
+12:01:33 AM: DEBUG [Person.py: 40] 
+The ID [3], is Juan Perez, email: jperez@gmail.com
+12:04:50 AM: DEBUG [Person.py: 40] 
+The ID [3], is Juan Perez, email: jperez@gmail.com
+12:06:29 AM: DEBUG [Person.py: 40] 
+The ID [3], is Juan Perez, email: jperez@gmail.com
+12:07:46 AM: DEBUG [Person.py: 40] 
+The ID [3], is Juan Perez, email: jperez@gmail.com
+12:08:02 AM: DEBUG [Person.py: 40] 
+The ID [3], is Juan Perez, email: jperez@gmail.com
+12:08:02 AM: DEBUG [Person.py: 44] 
+The ID [None], is Leandro francis, email: franleao@gmail.com
+12:09:52 AM: DEBUG [Person.py: 40] 
+The ID [3], is Juan Perez, email: jperez@gmail.com
+12:09:52 AM: DEBUG [Person.py: 44] 
+The ID [None], is Leandro francis, email: franleao@gmail.com
+12:09:52 AM: DEBUG [Person.py: 47] 
+The ID [4], is None None, email: None
