@@ -29,3 +29,10 @@ The ID [3], is Juan Perez, email: jperez@gmail.com
 The ID [None], is Leandro francis, email: franleao@gmail.com
 12:09:52 AM: DEBUG [Person.py: 47] 
 The ID [4], is None None, email: None
+08:51:31 PM: ERROR [Conexion.py: 27] Ocurrio una excepcion: [invalid dsn: invalid connection option "passwd"
+]
+08:52:12 PM: ERROR [Conexion.py: 27] Ocurrio una excepcion: [invalid dsn: invalid connection option "passwprd"
+]
+08:52:22 PM: DEBUG [Conexion.py: 24] conexion exitosa: <connection object at 0x0000022987771580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:53:13 PM: DEBUG [Conexion.py: 24] conexion exitosa: <connection object at 0x0000025D70C81580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:53:13 PM: DEBUG [Conexion.py: 36] Cursor Succesfully initialized <cursor object at 0x0000025D72EFD9A0; closed: 0>
