@@ -36,3 +36,14 @@ The ID [4], is None None, email: None
 08:52:22 PM: DEBUG [Conexion.py: 24] conexion exitosa: <connection object at 0x0000022987771580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
 08:53:13 PM: DEBUG [Conexion.py: 24] conexion exitosa: <connection object at 0x0000025D70C81580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
 08:53:13 PM: DEBUG [Conexion.py: 36] Cursor Succesfully initialized <cursor object at 0x0000025D72EFD9A0; closed: 0>
+06:49:05 PM: DEBUG [Conexion.py: 24] conexion exitosa: <connection object at 0x00000247B7D01580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+06:49:05 PM: DEBUG [Conexion.py: 36] Cursor Succesfully initialized <cursor object at 0x00000247B9EF18C0; closed: 0>
+06:50:11 PM: DEBUG [Conexion.py: 24] conexion exitosa: <connection object at 0x000001E8487A1580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+06:50:11 PM: DEBUG [Conexion.py: 36] Cursor Succesfully initialized <cursor object at 0x000001E84A5E99A0; closed: 0>
+06:52:01 PM: DEBUG [Conexion.py: 24] conexion exitosa: <connection object at 0x000001B1A6C91580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+06:52:01 PM: DEBUG [Conexion.py: 36] Cursor Succesfully initialized <cursor object at 0x000001B1A8AD99A0; closed: 0>
+06:53:50 PM: DEBUG [Conexion.py: 24] conexion exitosa: <connection object at 0x0000020177C41580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+06:53:50 PM: DEBUG [Conexion.py: 36] Cursor Succesfully initialized <cursor object at 0x0000020179AD99A0; closed: 0>
+06:53:50 PM: DEBUG [person_dao.py: 33] 
+The ID [1], is paola gejejxd, email: ifjain@email.com
+
