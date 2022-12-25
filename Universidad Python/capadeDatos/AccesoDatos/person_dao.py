@@ -18,16 +18,37 @@ class personaDAO:
                 persona = Person(register[0],register[1],register[2],register[3])
                 persons.append(persona)
                 return persons
-'''    @classmethod 
+    @classmethod 
     def insert(cls, person):
-        
+        with Conexion.get_conexion() as conexion:
+            with Conexion.get_cursor() as cursor:
+                values = (person.name , person.surname, person.email)
+                cursor.execute(cls._INSERT, values)
+                log.debug(f'Insert Person: {person}')
+                return cursor.rowcount
+    
     @classmethod 
     def update(cls, person):
-        
+        with Conexion.get_conexion() as conexion:
+            with Conexion.get_cursor() as cursor:
+                Values= (person.name , person.surname, person.email, person.id_person)
+                cursor.execute(cls._UPDATE, Values)
+                log.debug(f'persons actualizada: {person}')
+                return cursor.rowcount
+'''             
     @classmethod 
     def delete(cls, person):'''
-        
 if __name__ == '__main__':
-    persons = personaDAO.select()
+    #UPDATE person
+    person_update1 = Person(name=None,surname='BAsi',email=None ,id_person=3)
+    persons_updates = personaDAO.update(person_update1)
+    log.debug(f'the person actulized :  {persons_updates}')
+    #INSERT person
+    '''person1 = Person(name='juana',surname='benitez',email='juanabb@live.com')
+    personas_insertadas = personaDAO.insert(person1)
+    log.debug(f'Persons inserted successfully: {personas_insertadas}  ')'''
+    #SELECT person
+    '''persons = personaDAO.select()
     for person in persons:
-        log.debug(person)
+        log.debug(person)'''
+        
