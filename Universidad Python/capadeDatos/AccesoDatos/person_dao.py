@@ -35,14 +35,29 @@ class personaDAO:
                 cursor.execute(cls._UPDATE, Values)
                 log.debug(f'persons actualizada: {person}')
                 return cursor.rowcount
-'''             
+         
     @classmethod 
-    def delete(cls, person):'''
+    def delete(cls, person):
+        with Conexion.get_conexion() as conexion:
+            with Conexion.get_cursor() as cursor:
+                value = (person.id_person,)
+                cursor.execute(cls._DELETE, value)
+                log.debug(f'person eliminated:  {person}')
+                return cursor.rowcount 
+
+
 if __name__ == '__main__':
+    #DELETE PERSON
+    persona_eliminada = int(input('Ingrese el id_person a eliminar :   '))
+    person_delete1 = Person(id_person= persona_eliminada)
+    personas_eliminadas = personaDAO.delete(person_delete1)
+    log.debug(f'las personas eliminadas son:    {personas_eliminadas}')
+
+
     #UPDATE person
-    person_update1 = Person(name=None,surname='BAsi',email=None ,id_person=3)
+    '''person_update1 = Person(name=None,surname='BAsi',email=None ,id_person=3)
     persons_updates = personaDAO.update(person_update1)
-    log.debug(f'the person actulized :  {persons_updates}')
+    log.debug(f'the person actulized :  {persons_updates}')'''
     #INSERT person
     '''person1 = Person(name='juana',surname='benitez',email='juanabb@live.com')
     personas_insertadas = personaDAO.insert(person1)
