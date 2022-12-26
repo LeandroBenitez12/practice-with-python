@@ -30,3 +30,8 @@ if __name__ == '__main__':
         log.debug('dentro del with')
         cursor.execute('SELECT * FROM person ') #CUANDO TERMINA ESTO SE MANDA ALLAMAR EL __EXIT__
         log.debug(cursor.fetchall())
+
+#LO IMPORTANTE DE ESTO ES QUE ESTAMOS FORMALIZANDO EL MANEJO DE PULL DE CONEXIONES , 
+# EL USO DE OBJETOS DE TIPO DE CONEXION 
+#OBJETOS DE TIPO CURSOR
+# Y EL USO DE SENTENCIAS SQL DE TIPO CRUD
