@@ -8,7 +8,7 @@ class CursorDelPool:
     #INICIAMOS EL BLOQUE WITH 
     def __enter__(self):
         log.debug('inicio metodo with "__enter__"')
-        self._conexion = Conexion.get_conexion()    #SOLICITAMOS UN OBJETO CONEXION
+        self._conexion = Conexion.get_conexion()    #SOLICITAMOS UN OBJETO CONEXION, de aqui se obtiene un objeto cursor
         self._cursor = self._conexion.cursor()  #SOLICITAMOS UN OBJETO CURSOR
         return self._cursor
     #CUANDO TERMINAMOS EL BLOQUE WITH
@@ -23,3 +23,10 @@ class CursorDelPool:
             log.debug('commit de la transaccion')
             self._cursor.close()
             Conexion.liberar_conexion(self._conexion)
+
+
+if __name__ == '__main__':
+    with CursorDelPool() as cursor:
+        log.debug('dentro del with')
+        cursor.execute('SELECT * FROM person ') #CUANDO TERMINA ESTO SE MANDA ALLAMAR EL __EXIT__
+        log.debug(cursor.fetchall())
