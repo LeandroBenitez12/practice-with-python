@@ -48,20 +48,22 @@ class personaDAO:
 
 if __name__ == '__main__':
     #DELETE PERSON
-    persona_eliminada = int(input('Ingrese el id_person a eliminar :   '))
+    '''persona_eliminada = int(input('Ingrese el id_person a eliminar :   '))
     person_delete1 = Person(id_person= persona_eliminada)
     personas_eliminadas = personaDAO.delete(person_delete1)
-    log.debug(f'las personas eliminadas son:    {personas_eliminadas}')
+    log.debug(f'las personas eliminadas son:    {personas_eliminadas}')'''
 
 
     #UPDATE person
-    '''person_update1 = Person(name=None,surname='BAsi',email=None ,id_person=3)
+    '''person_update1 = Person(name='mapache',surname='jere',email='mpache@hddajd.coms' ,id_person=1)
     persons_updates = personaDAO.update(person_update1)
     log.debug(f'the person actulized :  {persons_updates}')'''
     #INSERT person
-    '''person1 = Person(name='juana',surname='benitez',email='juanabb@live.com')
+    person1 = Person(name='juan',surname='benitez',email='juansvae@gmail.com')
+    person2 = Person(name='juana',surname='benitez',email='juanabb@gmail.com')
+    
     personas_insertadas = personaDAO.insert(person1)
-    log.debug(f'Persons inserted successfully: {personas_insertadas}  ')'''
+    log.debug(f'Persons inserted successfully: {personas_insertadas}  ')
     #SELECT person
     '''persons = personaDAO.select()
     for person in persons:
