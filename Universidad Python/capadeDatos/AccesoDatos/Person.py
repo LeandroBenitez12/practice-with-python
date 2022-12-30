@@ -1,4 +1,5 @@
 from Logger_base import log
+#clase de entidad, para represntar un registro
 class Person:
     def __init__(self,id_person = None ,name = None ,surname = None, email = None): #se lo agregamos a todos el none porque te da error
         self._id_person = id_person

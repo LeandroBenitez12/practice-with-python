@@ -2,6 +2,7 @@ from Logger_base import log
 from psycopg2.pool import SimpleConnectionPool
 import sys
 
+#se encarga de crear el objeto de pool de conexiones
 class Conexion:
     _DATABASE = 'test_db'
     _USERNAME = 'postgres'

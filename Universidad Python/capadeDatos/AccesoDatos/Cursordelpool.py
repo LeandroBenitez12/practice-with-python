@@ -1,6 +1,7 @@
 from Logger_base import log
 from Conexion import Conexion
 
+# se encarga de liberar las conexiones que ya no usemos y regresar al pool de conexiones
 class CursorDelPool:
     def __init__(self):
         self._conexion  = None
