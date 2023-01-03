@@ -8,7 +8,7 @@ class Users:
         return f'\nThe ID: [{ self._id_user}, Username: {self._username}, Password = {self._password}]'
 
     @property
-    def ID_user(self):
+    def id_user(self):
         return self._id_user
     
     @property

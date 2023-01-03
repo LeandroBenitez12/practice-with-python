@@ -1,27 +1,26 @@
-from Connection import Connection
 from Users import Users
 from Logger_base import log
 from poolCursor import poolCursor
 
 # contiene los metodos CRUD
-class personaDAO:
-    _SELECT = 'SELECT * FROM Person ORDER BY id_person '
-    _INSERT= 'INSERT INTO Person( name, surname, email) VALUES( %s, %s, %s)'
-    _CREATE = 'SELECT * FROM Person CREATE '
-    _UPDATE = 'UPDATE Person SET name = %s, surname = %s, email = %s WHERE id_person = %s'
-    _DELETE = 'DELETE FROM Person WHERE id_person = %s'
+class userDAO:
+    _SELECT = 'SELECT * FROM Users ORDER BY id_user '
+    _INSERT= 'INSERT INTO users( username, password) VALUES( %s, %s)'
+    _CREATE = 'SELECT * FROM Users CREATE '
+    _UPDATE = 'UPDATE Users SET username = %s, password = %s WHERE id_user = %s'
+    _DELETE = 'DELETE FROM Users WHERE id_user = %s'
 
     @classmethod 
     def select(cls):
-        with poolCursor() as cursor: #con los metodos de esta clase , __enter__ se hace automaticamente la conexion y se obtiene el cursor
+        with poolCursor() as cursor: 
             log.debug('Select Users...')
             cursor.execute(cls._SELECT)
             registers = cursor.fetchall()
-            users = []
+            usuarios = []
             for register in registers:
-                user = Users(register[0],register[1],register[2],register[3])
-                users.append(user)
-            return users  
+                usuario = Users(register[0], register[1], register[2],)
+                usuarios.append(usuario)
+            return usuarios  
         #retorna la lista de registros de personas que haya
         #al finalizar el bloque with
         #se llama al metodo exit de la clase cursor del pool,
@@ -37,7 +36,7 @@ class personaDAO:
     @classmethod 
     def update(cls, user):
         with poolCursor() as cursor:
-            Values= (user.username, user.password, person.id_user)
+            Values= (user.username, user.password, user.id_user)
             cursor.execute(cls._UPDATE, Values)
             log.debug(f'The update record is: {user}')
             return cursor.rowcount
@@ -45,7 +44,14 @@ class personaDAO:
     @classmethod 
     def delete(cls, user):
         with poolCursor() as cursor:
-            value = (user.id_person,)
+            value = (user.id_user,)
             cursor.execute(cls._DELETE, value)
             log.debug(f'The deleted record is: {user}')
             return cursor.rowcount 
+if __name__ == '__main__':
+    username_var = input('Write the Username: ')
+    password_var = input('Write the Password: ')
+    user1 = Users(username= username_var)
+    usuarios = userDAO.delete(user1)
+    for usuario in usuarios:
+        log.debug(usuario)

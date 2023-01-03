@@ -454,3 +454,233 @@ The ID [9], is jose benitez, email: felix091213@gmail.com
 The ID [10], is Isa Benitez, email: None
 05:26:42 PM: DEBUG [person_dao.py: 78] 
 The ID [13], is Gabriel Benitez, email: Hernang@gmail.com
+12:18:26 AM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+12:20:36 AM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+12:21:25 AM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+12:22:33 AM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+12:23:46 AM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+12:28:16 AM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+12:46:18 AM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+12:49:44 AM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+12:55:00 AM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+09:19:43 PM: DEBUG [Logger_base.py: 18] Mensaje a nivel DEBUG
+09:19:43 PM: INFO [Logger_base.py: 19] Mensaje a nivel INFO
+09:19:43 PM: ERROR [Logger_base.py: 20] Mensaje a nivel ERROR
+09:19:43 PM: WARNING [Logger_base.py: 21] Mensaje a nivel WARNING
+09:19:43 PM: CRITICAL [Logger_base.py: 22] Mensaje a nivel CRITICAL
+09:20:07 PM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+09:26:18 PM: DEBUG [Conexion.py: 27] Creaste pool <psycopg2.pool.SimpleConnectionPool object at 0x0000014B7F44ACB0> succesfully 
+09:26:18 PM: DEBUG [Conexion.py: 39] Conexion obtenida del pool: <connection object at 0x0000014B7F2D3890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:18 PM: DEBUG [Conexion.py: 45] Regresamos conexion: <connection object at 0x0000014B7F2D3890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:18 PM: DEBUG [Conexion.py: 39] Conexion obtenida del pool: <connection object at 0x0000014B7F2D3890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:18 PM: DEBUG [Conexion.py: 39] Conexion obtenida del pool: <connection object at 0x0000014B7F2D3DE0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:18 PM: DEBUG [Conexion.py: 39] Conexion obtenida del pool: <connection object at 0x0000014B7F2D3CD0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:58:03 PM: DEBUG [Conexion.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x0000023DBDE7ACB0>
+09:58:03 PM: DEBUG [Conexion.py: 39] The connection was correct: <class '__main__.Conexion'>
+09:58:03 PM: DEBUG [Conexion.py: 45] The connection was returned succesfully: <class '__main__.Conexion'>
+09:58:03 PM: DEBUG [Conexion.py: 39] The connection was correct: <class '__main__.Conexion'>
+09:58:03 PM: DEBUG [Conexion.py: 39] The connection was correct: <class '__main__.Conexion'>
+09:58:03 PM: DEBUG [Conexion.py: 39] The connection was correct: <class '__main__.Conexion'>
+10:02:01 PM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+10:02:01 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x00000143C831FF70>
+10:04:58 PM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+10:04:59 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000001FBD4B7FF70>
+10:06:13 PM: DEBUG [Cursordelpool.py: 11] inicio metodo with "__enter__"
+10:06:13 PM: DEBUG [Conexion.py: 27] Creaste pool <psycopg2.pool.SimpleConnectionPool object at 0x0000029E29C6FEB0> succesfully 
+10:06:13 PM: DEBUG [Conexion.py: 39] Conexion obtenida del pool: <connection object at 0x0000029E29B23890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:06:13 PM: DEBUG [Cursordelpool.py: 31] dentro del with
+10:06:13 PM: DEBUG [Cursordelpool.py: 33] [(9, 'jose', 'benitez', 'felix091213@gmail.com'), (1, 'Leandro', 'Benitez', 'leansvae9@gmail.com'), (10, 'Isa', 'Benitez', None), (6, 'Juan', 'Benitez', 'juansvae@gmail.com'), (13, 'Gabriel', 'Benitez', 'Hernang@gmail.com'), (8, 'Juana', 'Benitez', 'juanabb@live.com.ar')]
+10:06:13 PM: DEBUG [Cursordelpool.py: 18] Dentro del metodo __exit__
+10:06:13 PM: DEBUG [Cursordelpool.py: 24] commit de la transaccion
+10:06:13 PM: DEBUG [Conexion.py: 45] Regresamos conexion: <connection object at 0x0000029E29B23890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:10:13 PM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+10:10:14 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x0000022D4A48FEB0>
+10:10:32 PM: DEBUG [Cursordelpool.py: 11] inicio metodo with "__enter__"
+10:10:32 PM: DEBUG [Conexion.py: 27] Creaste pool <psycopg2.pool.SimpleConnectionPool object at 0x000001F18F61FEB0> succesfully 
+10:10:32 PM: DEBUG [Conexion.py: 39] Conexion obtenida del pool: <connection object at 0x000001F18F103890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:10:32 PM: DEBUG [Cursordelpool.py: 31] dentro del with
+10:10:32 PM: DEBUG [Cursordelpool.py: 33] [(9, 'jose', 'benitez', 'felix091213@gmail.com'), (1, 'Leandro', 'Benitez', 'leansvae9@gmail.com'), (10, 'Isa', 'Benitez', None), (6, 'Juan', 'Benitez', 'juansvae@gmail.com'), (13, 'Gabriel', 'Benitez', 'Hernang@gmail.com'), (8, 'Juana', 'Benitez', 'juanabb@live.com.ar')]
+10:10:32 PM: DEBUG [Cursordelpool.py: 18] Dentro del metodo __exit__
+10:10:32 PM: DEBUG [Cursordelpool.py: 24] commit de la transaccion
+10:10:32 PM: DEBUG [Conexion.py: 45] Regresamos conexion: <connection object at 0x000001F18F103890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:10:50 PM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+10:10:50 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000001BD96D8FEB0>
+10:12:55 PM: DEBUG [poolCursor.py: 11] We enter the method __enter__ 
+10:12:55 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000001790F5DFEB0>
+10:14:38 PM: DEBUG [poolCursor.py: 11] inicio metodo with "__enter__"
+10:14:38 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000002A14845FEB0>
+10:14:38 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:14:38 PM: DEBUG [poolCursor.py: 30] dentro del with
+10:14:38 PM: DEBUG [poolCursor.py: 32] [(9, 'jose', 'benitez', 'felix091213@gmail.com'), (1, 'Leandro', 'Benitez', 'leansvae9@gmail.com'), (10, 'Isa', 'Benitez', None), (6, 'Juan', 'Benitez', 'juansvae@gmail.com'), (13, 'Gabriel', 'Benitez', 'Hernang@gmail.com'), (8, 'Juana', 'Benitez', 'juanabb@live.com.ar')]
+10:14:38 PM: DEBUG [poolCursor.py: 18] We enter the method __exit__ 
+10:15:08 PM: DEBUG [poolCursor.py: 11] inicio metodo with "__enter__"
+10:15:09 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000002B5FB18FEB0>
+10:15:09 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:15:09 PM: DEBUG [poolCursor.py: 30] dentro del with
+10:15:09 PM: DEBUG [poolCursor.py: 32] [(9, 'jose', 'benitez', 'felix091213@gmail.com'), (1, 'Leandro', 'Benitez', 'leansvae9@gmail.com'), (10, 'Isa', 'Benitez', None), (6, 'Juan', 'Benitez', 'juansvae@gmail.com'), (13, 'Gabriel', 'Benitez', 'Hernang@gmail.com'), (8, 'Juana', 'Benitez', 'juanabb@live.com.ar')]
+10:15:09 PM: DEBUG [poolCursor.py: 18] We enter the method __exit__ 
+10:15:09 PM: DEBUG [poolCursor.py: 24] Commit was done correctly
+10:15:09 PM: DEBUG [Connection.py: 45] The connection was returned succesfully: <connection object at 0x000002B5FB043890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:15:17 PM: DEBUG [poolCursor.py: 11] inicio metodo with "__enter__"
+10:15:17 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000001A96364FEB0>
+10:15:17 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:15:17 PM: DEBUG [poolCursor.py: 30] dentro del with
+10:15:17 PM: DEBUG [poolCursor.py: 32] [(9, 'jose', 'benitez', 'felix091213@gmail.com'), (1, 'Leandro', 'Benitez', 'leansvae9@gmail.com'), (10, 'Isa', 'Benitez', None), (6, 'Juan', 'Benitez', 'juansvae@gmail.com'), (13, 'Gabriel', 'Benitez', 'Hernang@gmail.com'), (8, 'Juana', 'Benitez', 'juanabb@live.com.ar')]
+10:15:17 PM: DEBUG [poolCursor.py: 18] We enter the method __exit__ 
+10:15:17 PM: DEBUG [poolCursor.py: 24] Commit was done correctly
+10:15:17 PM: DEBUG [Connection.py: 45] The connection was returned succesfully: <connection object at 0x000001A963503890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:16:07 PM: DEBUG [poolCursor.py: 11] inicio metodo with "__enter__"
+10:16:07 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000001FCEA7DFEB0>
+10:16:07 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:16:07 PM: DEBUG [poolCursor.py: 30] dentro del with
+10:16:07 PM: DEBUG [poolCursor.py: 32] [(9, 'jose', 'benitez', 'felix091213@gmail.com'), (1, 'Leandro', 'Benitez', 'leansvae9@gmail.com'), (10, 'Isa', 'Benitez', None), (6, 'Juan', 'Benitez', 'juansvae@gmail.com'), (13, 'Gabriel', 'Benitez', 'Hernang@gmail.com'), (8, 'Juana', 'Benitez', 'juanabb@live.com.ar')]
+10:16:07 PM: DEBUG [poolCursor.py: 18] We enter the method __exit__ 
+10:16:07 PM: DEBUG [poolCursor.py: 24] Commit was done correctly
+10:16:07 PM: DEBUG [Connection.py: 45] The connection was returned succesfully: <connection object at 0x000001FCEA2F3890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:16:13 PM: DEBUG [poolCursor.py: 11] inicio metodo with "__enter__"
+10:16:14 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x0000020915A8FEB0>
+10:16:14 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:16:14 PM: DEBUG [poolCursor.py: 30] dentro del with
+10:16:14 PM: DEBUG [poolCursor.py: 32] [(9, 'jose', 'benitez', 'felix091213@gmail.com'), (1, 'Leandro', 'Benitez', 'leansvae9@gmail.com'), (10, 'Isa', 'Benitez', None), (6, 'Juan', 'Benitez', 'juansvae@gmail.com'), (13, 'Gabriel', 'Benitez', 'Hernang@gmail.com'), (8, 'Juana', 'Benitez', 'juanabb@live.com.ar')]
+10:16:14 PM: DEBUG [poolCursor.py: 18] We enter the method __exit__ 
+10:16:14 PM: DEBUG [poolCursor.py: 24] Commit was done correctly
+10:16:14 PM: DEBUG [Connection.py: 45] The connection was returned succesfully: <connection object at 0x0000020915943890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:20:35 PM: DEBUG [poolCursor.py: 11] We enter the method "__enter__"
+10:20:35 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x0000024601B7FF70>
+10:20:35 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:20:35 PM: DEBUG [UserDAO.py: 16] Select Users...
+10:20:35 PM: DEBUG [poolCursor.py: 18] We enter the method " __exit__" 
+10:20:35 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'TypeError'> Users.__init__() takes from 1 to 4 positional arguments but 5 were given <traceback object at 0x0000024603BD4080>
+10:25:42 PM: DEBUG [poolCursor.py: 11] We enter the method "__enter__"
+10:25:42 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000001F89E491030>
+10:25:42 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:25:42 PM: DEBUG [UserDAO.py: 16] Select Users...
+10:25:42 PM: DEBUG [poolCursor.py: 18] We enter the method " __exit__" 
+10:25:42 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'IndexError'> tuple index out of range <traceback object at 0x000001F89FFD9680>
+10:27:02 PM: DEBUG [poolCursor.py: 11] We enter the method "__enter__"
+10:27:03 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000002C45A981030>
+10:27:03 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:27:03 PM: DEBUG [UserDAO.py: 16] Select Users...
+10:27:03 PM: DEBUG [poolCursor.py: 18] We enter the method " __exit__" 
+10:27:03 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'IndexError'> tuple index out of range <traceback object at 0x000002C45C4897C0>
+10:27:17 PM: DEBUG [poolCursor.py: 11] We enter the method "__enter__"
+10:27:17 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000002CE083B1030>
+10:27:17 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:27:17 PM: DEBUG [UserDAO.py: 16] Select Users...
+10:27:17 PM: DEBUG [poolCursor.py: 18] We enter the method " __exit__" 
+10:27:17 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'IndexError'> tuple index out of range <traceback object at 0x000002CE09EB96C0>
+10:28:59 PM: DEBUG [poolCursor.py: 11] We enter the method "__enter__"
+10:28:59 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000001868D120F70>
+10:28:59 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:28:59 PM: DEBUG [UserDAO.py: 16] Select Users...
+10:28:59 PM: DEBUG [poolCursor.py: 18] We enter the method " __exit__" 
+10:28:59 PM: DEBUG [poolCursor.py: 24] Commit was done correctly
+10:28:59 PM: DEBUG [Connection.py: 45] The connection was returned succesfully: <connection object at 0x000001868CB13890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:28:59 PM: DEBUG [UserDAO.py: 54] 
+The ID: [1, Username: Leandro, Password = Benitez]
+10:28:59 PM: DEBUG [UserDAO.py: 54] 
+The ID: [6, Username: Juan, Password = Benitez]
+10:28:59 PM: DEBUG [UserDAO.py: 54] 
+The ID: [8, Username: Juana, Password = Benitez]
+10:28:59 PM: DEBUG [UserDAO.py: 54] 
+The ID: [9, Username: jose, Password = benitez]
+10:28:59 PM: DEBUG [UserDAO.py: 54] 
+The ID: [10, Username: Isa, Password = Benitez]
+10:28:59 PM: DEBUG [UserDAO.py: 54] 
+The ID: [13, Username: Gabriel, Password = Benitez]
+10:29:21 PM: DEBUG [poolCursor.py: 11] We enter the method "__enter__"
+10:29:22 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000001E869D0FF70>
+10:29:22 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:29:22 PM: DEBUG [UserDAO.py: 16] Select Users...
+10:29:22 PM: DEBUG [poolCursor.py: 18] We enter the method " __exit__" 
+10:29:22 PM: DEBUG [poolCursor.py: 24] Commit was done correctly
+10:29:22 PM: DEBUG [Connection.py: 45] The connection was returned succesfully: <connection object at 0x000001E8697C3890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:29:22 PM: INFO [menuAppUsers.py: 24] 
+The ID: [1, Username: Leandro, Password = Benitez]
+10:29:22 PM: INFO [menuAppUsers.py: 24] 
+The ID: [6, Username: Juan, Password = Benitez]
+10:29:22 PM: INFO [menuAppUsers.py: 24] 
+The ID: [8, Username: Juana, Password = Benitez]
+10:29:22 PM: INFO [menuAppUsers.py: 24] 
+The ID: [9, Username: jose, Password = benitez]
+10:29:22 PM: INFO [menuAppUsers.py: 24] 
+The ID: [10, Username: Isa, Password = Benitez]
+10:29:22 PM: INFO [menuAppUsers.py: 24] 
+The ID: [13, Username: Gabriel, Password = Benitez]
+10:34:01 PM: DEBUG [poolCursor.py: 11] We enter the method "__enter__"
+10:34:01 PM: DEBUG [Connection.py: 27] The pool was Created succesfully: <psycopg2.pool.SimpleConnectionPool object at 0x000002110B080F70>
+10:34:01 PM: DEBUG [Connection.py: 39] The connection was correct: <class 'Connection.Connection'>
+10:34:01 PM: DEBUG [UserDAO.py: 16] Select Users...
+10:34:01 PM: DEBUG [poolCursor.py: 18] We enter the method " __exit__" 
+10:34:01 PM: DEBUG [poolCursor.py: 24] Commit was done correctly
+10:34:01 PM: DEBUG [Connection.py: 45] The connection was returned succesfully: <connection object at 0x000002110AA73890; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:34:01 PM: DEBUG [UserDAO.py: 54] 
+The ID: [1, Username: Leandro, Password = Benitez]
+10:34:01 PM: DEBUG [UserDAO.py: 54] 
+The ID: [6, Username: Juan, Password = Benitez]
+10:34:01 PM: DEBUG [UserDAO.py: 54] 
+The ID: [8, Username: Juana, Password = Benitez]
+10:34:01 PM: DEBUG [UserDAO.py: 54] 
+The ID: [9, Username: jose, Password = benitez]
+10:34:01 PM: DEBUG [UserDAO.py: 54] 
+The ID: [10, Username: Isa, Password = Benitez]
+10:34:01 PM: DEBUG [UserDAO.py: 54] 
+The ID: [13, Username: Gabriel, Password = Benitez]
+10:36:39 PM: INFO [menuAppUsers.py: 24] 
+The ID: [1, Username: Leandro, Password = Benitez]
+10:36:39 PM: INFO [menuAppUsers.py: 24] 
+The ID: [6, Username: Juan, Password = Benitez]
+10:36:39 PM: INFO [menuAppUsers.py: 24] 
+The ID: [8, Username: Juana, Password = Benitez]
+10:36:39 PM: INFO [menuAppUsers.py: 24] 
+The ID: [9, Username: jose, Password = benitez]
+10:36:39 PM: INFO [menuAppUsers.py: 24] 
+The ID: [10, Username: Isa, Password = Benitez]
+10:36:39 PM: INFO [menuAppUsers.py: 24] 
+The ID: [13, Username: Gabriel, Password = Benitez]
+10:38:48 PM: INFO [menuAppUsers.py: 26] You left the app...
+10:44:20 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'IndexError'> tuple index out of range <traceback object at 0x000001B9FB8E9540>
+10:45:40 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'IndexError'> tuple index out of range <traceback object at 0x000002450C414080>
+10:59:03 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'IndexError'> tuple index out of range <traceback object at 0x000001A26C2C3E80>
+11:00:14 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'AttributeError'> 'Users' object has no attribute 'id_user' <traceback object at 0x00000244AE47C8C0>
+11:01:41 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'IndexError'> tuple index out of range <traceback object at 0x000002081EF34240>
+11:16:32 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'IndexError'> tuple index out of range <traceback object at 0x0000019DD58893C0>
+11:22:35 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'psycopg2.errors.UndefinedTable'> no existe la relación «users»
+LINE 1: INSERT INTO Users( username, password) VALUES( 'Leandro', 'B...
+                    ^
+ <traceback object at 0x000001CE29444200>
+11:25:16 PM: INFO [menuAppUsers.py: 24] 
+The ID: [1, Username: Leansvae ||, Password = Coeslean13]
+11:25:16 PM: INFO [menuAppUsers.py: 24] 
+The ID: [2, Username: leandro_benitez12, Password = Pamaju12]
+11:26:15 PM: INFO [menuAppUsers.py: 24] 
+The ID: [1, Username: Leansvae ||, Password = Coeslean13]
+11:26:15 PM: INFO [menuAppUsers.py: 24] 
+The ID: [2, Username: leandro_benitez12, Password = Pamaju12]
+11:26:15 PM: INFO [menuAppUsers.py: 24] 
+The ID: [3, Username: Leann, Password = 446023790]
+11:27:08 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'psycopg2.errors.InvalidTextRepresentation'> la sintaxis de entrada no es válida para tipo integer: «Pamaju12»
+LINE 1: ...me = 3, password = 'Leann Benitz' WHERE id_user = 'Pamaju12'
+                                                             ^
+ <traceback object at 0x000001F1CEA94680>
+11:28:58 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'psycopg2.errors.InvalidTextRepresentation'> la sintaxis de entrada no es válida para tipo integer: «Pamaju13»
+LINE 1: ...me = 3, password = 'Leann Benitz' WHERE id_user = 'Pamaju13'
+                                                             ^
+ <traceback object at 0x00000202FDBD9800>
+11:30:10 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'psycopg2.errors.InvalidTextRepresentation'> la sintaxis de entrada no es válida para tipo integer: «Pamaju13»
+LINE 1: ...me = 3, password = 'Leann Benitz' WHERE id_user = 'Pamaju13'
+                                                             ^
+ <traceback object at 0x000001E4754E9540>
+11:31:44 PM: INFO [menuAppUsers.py: 24] 
+The ID: [1, Username: Leansvae ||, Password = Coeslean13]
+11:31:44 PM: INFO [menuAppUsers.py: 24] 
+The ID: [2, Username: leandro_benitez12, Password = Pamaju12]
+11:31:44 PM: INFO [menuAppUsers.py: 24] 
+The ID: [3, Username: Leann Benitz, Password = Pamaju13]
+11:38:00 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'AttributeError'> 'int' object has no attribute 'id_person' <traceback object at 0x000001E49F183D00>
+11:41:44 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'AttributeError'> 'str' object has no attribute 'id_person' <traceback object at 0x00000246F6153D00>
+11:44:47 PM: ERROR [poolCursor.py: 21] An ocurred Exception: <class 'AttributeError'> 'Users' object has no attribute 'id_person' <traceback object at 0x000001A0D8583D00>
+11:46:10 PM: INFO [menuAppUsers.py: 24] 
+The ID: [1, Username: Leansvae ||, Password = Coeslean13]
+11:46:10 PM: INFO [menuAppUsers.py: 24] 
+The ID: [2, Username: leandro_benitez12, Password = Pamaju12]

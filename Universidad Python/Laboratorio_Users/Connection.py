@@ -1,18 +1,17 @@
-import Logger_base as log
+from Logger_base import log
 from psycopg2.pool import SimpleConnectionPool
 import sys
 
 #se encarga de crear el objeto de pool de conexiones
-class Conexion:
+class Connection:
     _DATABASE = 'test_db'
     _USERNAME = 'postgres'
-    _PASSWORD = 'admin'
+    _PASSWORD = 'admin' 
     _DB_PORT = '5432'
     _HOST = '127.0.0.1'
     _MIN_CONN = 1
     _MAX_CONN = 3
     _pool = None
-    #para llamar a las constantes o variables locales se necesita del 'cls.' como el 'self.'
 
     @classmethod
     def getPool(cls):
@@ -27,21 +26,31 @@ class Conexion:
                 )
                 log.debug(f'The pool was Created succesfully: {cls._pool}')
                 return cls._pool
-
+    
             except Exception as e:
-                log.error(f'ERROR GETTING POOL: {e}')
+                log.error(f'Ocurrio un Error mientras se obtenia el POOL [{e}]')
                 sys.exit()
         else:
             return cls._pool
-    @classmethod
-    def getConnection(cls):
-        Connection = cls.getPool().getconn()
-        log.debug(f'The connection was correct: {Connection}')
 
     @classmethod
-    def returnConnection(cls, Connection):
+    def getConnection(cls):
+        connect = cls.getPool().getconn()
+        log.debug(f'The connection was correct: {Connection}')
+        return connect
+    
+    @classmethod
+    def returnConnection(cls,Connection):
         cls.getPool().putconn(Connection)
         log.debug(f'The connection was returned succesfully: {Connection}')
 
+    @classmethod
     def closeConnection(cls):
         cls.getPool().closedall()
+
+if __name__ == '__main__':
+    conex1 = Connection.getConnection()
+    Connection.returnConnection(conex1)
+    conex2 = Connection.getConnection()
+    conex3 = Connection.getConnection()
+    conex4 = Connection.getConnection()

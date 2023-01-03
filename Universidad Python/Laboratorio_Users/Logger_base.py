@@ -2,14 +2,15 @@ import logging as log
 
 #agregamos mas caracteristicas
 log.basicConfig(
-    level=log.DEBUG,
+    level=log.INFO,
     format=('%(asctime)s: %(levelname)s [%(filename)s: %(lineno)s] %(message)s'),
     datefmt = '%I:%M:%S %p',
     handlers= [
         log.FileHandler('capa_datos.log'),
         log.StreamHandler()
     ]
-)    #configuramops el nivel a trabajar
+)    
+#configuramops el nivel a trabajar
 #Al poner en el LEVEL = DEBUG se van a estar imprimeindo todos ya que es el nivel mas basico hacia adelante
 
 
