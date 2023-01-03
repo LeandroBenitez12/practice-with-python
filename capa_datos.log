@@ -684,3 +684,26 @@ The ID: [3, Username: Leann Benitz, Password = Pamaju13]
 The ID: [1, Username: Leansvae ||, Password = Coeslean13]
 11:46:10 PM: INFO [menuAppUsers.py: 24] 
 The ID: [2, Username: leandro_benitez12, Password = Pamaju12]
+12:01:52 AM: INFO [menuAppUsers.py: 24] 
+The ID: [1, Username: Leansvae ||, Password = Coeslean13]
+12:01:52 AM: INFO [menuAppUsers.py: 24] 
+The ID: [2, Username: leandro_benitez12, Password = Pamaju12]
+12:02:17 AM: INFO [menuAppUsers.py: 30] the succesfully inserted records were 1
+
+12:02:24 AM: INFO [menuAppUsers.py: 24] 
+The ID: [1, Username: Leansvae ||, Password = Coeslean13]
+12:02:24 AM: INFO [menuAppUsers.py: 24] 
+The ID: [2, Username: leandro_benitez12, Password = Pamaju12]
+12:02:24 AM: INFO [menuAppUsers.py: 24] 
+The ID: [4, Username: Leandro5_, Password = PAmaju.18]
+12:03:00 AM: INFO [menuAppUsers.py: 38] The succesfully updated records were 0
+12:03:10 AM: INFO [menuAppUsers.py: 30] the succesfully inserted records were 1
+
+12:03:18 AM: INFO [menuAppUsers.py: 43] The succesfully deleted records were 1
+12:03:25 AM: INFO [menuAppUsers.py: 24] 
+The ID: [1, Username: Leansvae ||, Password = Coeslean13]
+12:03:25 AM: INFO [menuAppUsers.py: 24] 
+The ID: [2, Username: leandro_benitez12, Password = Pamaju12]
+12:03:25 AM: INFO [menuAppUsers.py: 24] 
+The ID: [4, Username: Leandro5_, Password = PAmaju.18]
+12:04:32 AM: INFO [menuAppUsers.py: 45] You left the app...

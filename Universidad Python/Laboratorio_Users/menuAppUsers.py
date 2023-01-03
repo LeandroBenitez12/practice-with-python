@@ -27,7 +27,7 @@ while option != 5:
         password_var = input('Write the Password: ')
         user1 = Users(username= username_var, password= password_var)
         users_inserted = userDAO.insert(user1)
-        log.debug(f'the succesfully inserted records were {users_inserted}\n')
+        log.info(f'the succesfully inserted records were {users_inserted}\n')
     elif option == 3:
         
         username_var = input('Write the Username: ')
@@ -35,11 +35,11 @@ while option != 5:
         id_user_var = int(input('Write id_user to update: '))
         user1 = Users(id_user=id_user_var, username= username_var, password= password_var )
         users_updates = userDAO.update(user1)
-        log.debug(f'The succesfully updated records were {users_updates}')
+        log.info(f'The succesfully updated records were {users_updates}')
     elif option == 4:
         id_user_var = input('Write the User to deleted: ')
         user1= Users(id_user= id_user_var)
         users_deletes = userDAO.delete(user1)
-        f'The succesfully deleted records were {users_deletes}'
+        log.info(f'The succesfully deleted records were {users_deletes}')
 else:
     log.info('You left the app...')
