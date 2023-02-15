@@ -50,6 +50,9 @@ while True:
         suma2 = 0.0
         for c2 in contorno2:
             area = cv.contourArea(c2)
+            momentos = cv.moments(c2)
+            if (momentos["m00"]) ==0:
+                momentos["m00"]=1.0 #momento estatico
 
 
     cv.imshow('En vivo', enVivo)
