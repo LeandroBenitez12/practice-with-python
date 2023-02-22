@@ -13,11 +13,16 @@ while True:
     #Pasamos el video a escala de grises
     gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
     #
-    cara=ruidos.detectMultiScale(gray,1.4,4)
-    
-    for(x,y,e1,e2) in cara:
-        cv.rectangle(enVivo, (x,y), (x+e1,y+e2), (220,255,255), 2)
-    
+    caras =ruidos.detectMultiScale(gray,
+    scaleFactor= 1.2,
+    minNeighbors=3,
+    minSize=(60,60),
+    maxSize= (200,200))
+    font=cv.FONT_HERSHEY_SIMPLEX
+    for(x,y,h,b) in caras:
+        cv.rectangle(enVivo, (x,y), (x+h,y+b), (0,0,0), 2)
+
+    cv.putText(enVivo, "Mire Frontalmente a la camara y sonria", (50,400) , font, 0.75, (0,0,0),2)
     cv.imshow('Cara', enVivo)
     
     if cv.waitKey(1) == ord('q'):
