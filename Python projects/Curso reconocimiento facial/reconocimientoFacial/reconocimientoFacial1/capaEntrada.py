@@ -4,7 +4,7 @@ import os
 import imutils
 
 #declaramos rutas
-modelo= 'Caras Leandro'
+modelo= 'Video Elon'
 ruta1= 'C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1'
 rutaCompleta =ruta1 +'\\'+ modelo
 #ruidos de archivo xml
@@ -14,15 +14,19 @@ ruidos=cv.CascadeClassifier('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-pytho
 if not os.path.exists(rutaCompleta):
     os.makedirs(rutaCompleta)
 
-#le decimos que la video captura es interna (0)
-camara = cv.VideoCapture(0)
-
+#En vivo le decimos que la video captura es interna (0)
+# camara = cv.VideoCapture(0)
+#video Auron
+# camara = cv.VideoCapture('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\videos\\videoauron.mp4')
+#video Elon
+camara = cv.VideoCapture('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\videos\\ElonMusk.mp4')
+#cuenta las capturas
 id = 0
 while True:
     #Encontramos la camara
     respuesta, enVivo = camara.read()
     #bajamos resolucion para que no pese tanto al img
-    enVivo= imutils.resize(enVivo, width= 1080)
+    enVivo= imutils.resize(enVivo, width= 640)
     if respuesta == False:
         break
     #Pasamos el video a escala de grises
@@ -37,8 +41,7 @@ while True:
 
     #fuente de la letra del video
     font=cv.FONT_HERSHEY_DUPLEX 
-    #cuenta las capturas
-    
+
     #ahorra recursos
     idcaptura = enVivo.copy()
 
@@ -55,9 +58,9 @@ while True:
     # cv.putText(enVivo, "Mire Frontalmente a la camara y sonria", (50,400) , font, 0.75, (0,0,0),2)
     #mostramos camara en vivo con dettecion de rostros
     cv.imshow('Resultado', enVivo)
-    cv.waitKey(200)
+    # cv.waitKey(200)
     #cerrar programa
-    if id == 21:
+    if id == 101:
         break
     # if cv.waitKey(1) == ord('q'):
     #     break
