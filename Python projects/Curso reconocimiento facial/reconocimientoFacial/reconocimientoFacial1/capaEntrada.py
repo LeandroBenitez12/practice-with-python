@@ -4,7 +4,9 @@ import os
 import imutils
 
 #declaramos rutas
-modelo= 'Video Elon'
+
+#PONEMOS NOMBRE A LA CARPETA
+modelo= 'fotos juana'
 ruta1= 'C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1'
 rutaCompleta =ruta1 +'\\'+ modelo
 #ruidos de archivo xml
@@ -15,11 +17,11 @@ if not os.path.exists(rutaCompleta):
     os.makedirs(rutaCompleta)
 
 #En vivo le decimos que la video captura es interna (0)
-# camara = cv.VideoCapture(0)
+camara = cv.VideoCapture(0)
 #video Auron
 # camara = cv.VideoCapture('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\videos\\videoauron.mp4')
 #video Elon
-camara = cv.VideoCapture('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\videos\\ElonMusk.mp4')
+# camara = cv.VideoCapture('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\videos\\ElonMusk.mp4')
 #cuenta las capturas
 id = 0
 while True:
@@ -32,7 +34,7 @@ while True:
     #Pasamos el video a escala de grises
     gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
 
-    #detectamos las caras 
+    #detectamos las caras
     caras =ruidos.detectMultiScale(gray,
     scaleFactor= 1.3,
     minNeighbors=3,
@@ -40,7 +42,7 @@ while True:
     maxSize= (300,000))
 
     #fuente de la letra del video
-    font=cv.FONT_HERSHEY_DUPLEX 
+    font=cv.FONT_HERSHEY_DUPLEX
 
     #ahorra recursos
     idcaptura = enVivo.copy()
@@ -53,14 +55,14 @@ while True:
         rostroCapturado=cv.resize(rostroCapturado, [500,500], interpolation= cv.INTER_CUBIC)
         cv.imwrite(rutaCompleta+f'\\img_{id}.jpg', rostroCapturado)
         id = 1 +  id
-    
+
     #mensaje en el video para el usuario
     # cv.putText(enVivo, "Mire Frontalmente a la camara y sonria", (50,400) , font, 0.75, (0,0,0),2)
     #mostramos camara en vivo con dettecion de rostros
     cv.imshow('Resultado', enVivo)
     # cv.waitKey(200)
     #cerrar programa
-    if id == 101:
+    if id == 351:
         break
     # if cv.waitKey(1) == ord('q'):
     #     break
