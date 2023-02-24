@@ -6,7 +6,7 @@ import imutils
 #declaramos rutas
 
 #PONEMOS NOMBRE A LA CARPETA
-modelo= 'fotos juana'
+modelo= 'fotos leandro'
 ruta1= 'C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1'
 rutaCompleta =ruta1 +'\\'+ modelo
 #ruidos de archivo xml
