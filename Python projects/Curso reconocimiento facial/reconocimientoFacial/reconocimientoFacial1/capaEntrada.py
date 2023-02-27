@@ -6,22 +6,22 @@ import imutils
 #declaramos rutas
 
 #PONEMOS NOMBRE A LA CARPETA
-modelo= 'fotos leandro'
-ruta1= 'C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1'
-rutaCompleta =ruta1 +'\\'+ modelo
+modelo= 'fotos elon'
+ruta1= 'C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/dataFotos'
+rutaCompleta =ruta1 +'/'+ modelo
 #ruidos de archivo xml
-ruidos=cv.CascadeClassifier('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\Modelos de entrenamiento\\haarcascade_frontalface_default.xml')
+ruidos=cv.CascadeClassifier('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/Modelos de entrenamiento/haarcascade_frontalface_default.xml')
 
 #creamos carpeta
 if not os.path.exists(rutaCompleta):
     os.makedirs(rutaCompleta)
 
 #En vivo le decimos que la video captura es interna (0)
-camara = cv.VideoCapture(0)
+# camara = cv.VideoCapture(0)
 #video Auron
-# camara = cv.VideoCapture('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\videos\\videoauron.mp4')
+# camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/videoauron.mp4')
 #video Elon
-# camara = cv.VideoCapture('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\videos\\ElonMusk.mp4')
+camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/ElonMusk.mp4')
 #cuenta las capturas
 id = 0
 while True:
@@ -35,11 +35,7 @@ while True:
     gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
 
     #detectamos las caras
-    caras =ruidos.detectMultiScale(gray,
-    scaleFactor= 1.3,
-    minNeighbors=3,
-    minSize=(60,60),
-    maxSize= (300,000))
+    caras =ruidos.detectMultiScale(gray,1.3,5)
 
     #fuente de la letra del video
     font=cv.FONT_HERSHEY_DUPLEX
@@ -52,8 +48,8 @@ while True:
         cv.rectangle(enVivo, (x,y), (x+b,y+h), (0,0,0), 2)
         #
         rostroCapturado=idcaptura[y:y+h,x:x+b]
-        rostroCapturado=cv.resize(rostroCapturado, [500,500], interpolation= cv.INTER_CUBIC)
-        cv.imwrite(rutaCompleta+f'\\img_{id}.jpg', rostroCapturado)
+        rostroCapturado=cv.resize(rostroCapturado, [600,600], interpolation= cv.INTER_CUBIC)
+        cv.imwrite(rutaCompleta+f'/img_{id}.jpg', rostroCapturado)
         id = 1 +  id
 
     #mensaje en el video para el usuario
@@ -62,7 +58,7 @@ while True:
     cv.imshow('Resultado', enVivo)
     # cv.waitKey(200)
     #cerrar programa
-    if id == 351:
+    if id == 51:
         break
     # if cv.waitKey(1) == ord('q'):
     #     break

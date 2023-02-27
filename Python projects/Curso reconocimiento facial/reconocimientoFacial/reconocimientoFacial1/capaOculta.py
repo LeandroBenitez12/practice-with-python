@@ -43,5 +43,5 @@ tiempoTotalEntrenamiento = tiempoFinalEntrenamiento - tiempoTotalLectura
 # imprimimos el tiempo total del training
 print('Tiempo total Entrenamiento: ', tiempoTotalEntrenamiento)
 # escribimos como se va a nombrar el archivo creado
-entrenamientoEigenFaceRecognizer.write('EntrenamientoEigenFaceRecognizer.xml')
+entrenamientoEigenFaceRecognizer.write('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\EntrenamientoEigenFaceRecognizer.xml')
 print('Entrenamiento completado...')  # finalizamos training
