@@ -17,9 +17,9 @@ if not os.path.exists(rutaCompleta):
     os.makedirs(rutaCompleta)
 
 #En vivo le decimos que la video captura es interna (0)
-camara = cv.VideoCapture(0)
+# camara = cv.VideoCapture(0)
 #video Auron
-# camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/videoauron.mp4')
+camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/videoauron.mp4')
 #video Elon
 # camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/ElonMusk.mp4')
 #cuenta las capturas
@@ -35,8 +35,10 @@ while True:
     gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
 
     #detectamos las caras
-    caras =ruidos.detectMultiScale(gray,1.25,3)
-
+    caras =ruidos.detectMultiScale(gray,
+        scaleFactor=1.29,
+        minNeighbors=4,
+        minSize=[30,30])
     #fuente de la letra del video
     font=cv.FONT_HERSHEY_DUPLEX
 
@@ -58,7 +60,7 @@ while True:
     cv.imshow('Resultado', enVivo)
     # cv.waitKey(200)
     #cerrar programa
-    if id == 51:
+    if id == 201:
         break
     # if cv.waitKey(1) == ord('q'):
     #     break
