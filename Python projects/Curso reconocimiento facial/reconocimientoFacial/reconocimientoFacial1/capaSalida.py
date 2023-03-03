@@ -33,15 +33,15 @@ while True:
         rostro_capture= idCapture[y:y+h,x:x+b]
         rostro_capture= cv.resize(rostro_capture,[600,600], interpolation=cv.INTER_CUBIC)
         resultado= entrenamientoEigenFaceRecognizer.predict(rostro_capture)
-        cv.putText(enVivo, f'{resultado[0]}', (x,y-10),font ,1.2, (0,0,0), 2, cv.LINE_AA)
+        cv.putText(enVivo, f'{resultado}', (x,y-10),font ,1.2, (0,0,0), 2)
         
-        if resultado[0] > min_Result_Lean and resultado[0] < max_Result_Lean:
+        if resultado[1] > min_Result_Lean and resultado[1] < max_Result_Lean:
             cv.rectangle(enVivo, (x,y), (x+b,y+h), (0,255,0), 2)
-            cv.putText(enVivo, f'The person is: {resultado[1]}', (x,y-40), font, 1.2 , (0,0,0), 2, cv.LINE_AA)
+            cv.putText(enVivo, f'The person is: {listRuta[resultado[2]]}', (x,y-40), font, 1.1 , (0,0,0), 2, cv.LINE_AA)
 
         else:
             cv.rectangle(enVivo, (x,y), (x+b,y+h), (0,0,255), 2)
-            cv.putText(enVivo, f'The person is not found...', (x,y-40), font, 1.2 , (0,0,0), 2, cv.LINE_AA)
+            cv.putText(enVivo, f'The person is not found...', (x,y-40), font, 1.1 , (0,0,255), 2, cv.LINE_AA)
     cv.imshow('Camara Resultado',enVivo)
     if cv.waitKey(1) == ord('s'):
         break
