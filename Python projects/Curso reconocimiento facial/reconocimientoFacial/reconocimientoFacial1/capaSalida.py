@@ -1,6 +1,7 @@
 import cv2 as cv
 import os
-
+min_Result_Lean = 14000
+max_Result_Lean = 22000
 font=cv.FONT_HERSHEY_DUPLEX
 
 Contenedores_Fotos_ruta = 'C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/dataFotos'
@@ -32,8 +33,15 @@ while True:
         rostro_capture= idCapture[y:y+h,x:x+b]
         rostro_capture= cv.resize(rostro_capture,[600,600], interpolation=cv.INTER_CUBIC)
         resultado= entrenamientoEigenFaceRecognizer.predict(rostro_capture)
-        cv.putText(enVivo, f'{resultado}', (x,y-7),font ,1.2, (0,0,0), 2)
-        cv.rectangle(enVivo, ( x,y),(y+h,x+b), (255,0,0),2)
+        cv.putText(enVivo, f'{resultado[0]}', (x,y-10),font ,1.2, (0,0,0), 2, cv.LINE_AA)
+        
+        if resultado[0] > min_Result_Lean and resultado[0] < max_Result_Lean:
+            cv.rectangle(enVivo, (x,y), (x+b,y+h), (0,255,0), 2)
+            cv.putText(enVivo, f'The person is: {resultado[1]}', (x,y-40), font, 1.2 , (0,0,0), 2, cv.LINE_AA)
+
+        else:
+            cv.rectangle(enVivo, (x,y), (x+b,y+h), (0,0,255), 2)
+            cv.putText(enVivo, f'The person is not found...', (x,y-40), font, 1.2 , (0,0,0), 2, cv.LINE_AA)
     cv.imshow('Camara Resultado',enVivo)
     if cv.waitKey(1) == ord('s'):
         break
