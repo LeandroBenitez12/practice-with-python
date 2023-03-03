@@ -6,7 +6,7 @@ import imutils
 #declaramos rutas
 
 #PONEMOS NOMBRE A LA CARPETA
-modelo= 'Elon Musk'
+modelo= 'Leandro Benitez'
 ruta1= 'C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/dataFotos'
 rutaCompleta =ruta1 +'/'+ modelo
 #ruidos de archivo xml
@@ -17,13 +17,13 @@ if not os.path.exists(rutaCompleta):
     os.makedirs(rutaCompleta)
 
 #En vivo le decimos que la video captura es interna (0)
-# camara = cv.VideoCapture(0)
+camara = cv.VideoCapture(0)
 #video Auron
 # camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/videoauron.mp4')
 #video Elon
-camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/ElonMusk.mp4')
+# camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/ElonMusk.mp4')
 #cuenta las capturas
-id = 0
+id = 150
 while True:
     #Encontramos la camara
     respuesta, enVivo = camara.read()
