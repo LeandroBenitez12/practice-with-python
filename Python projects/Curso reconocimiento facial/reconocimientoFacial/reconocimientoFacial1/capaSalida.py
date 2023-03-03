@@ -20,7 +20,7 @@ while True:
         break
     gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
     idCapture= gray.copy()
-    caras =ruidos.detectMultiScale(gray,1.3,5)
+    caras =ruidos.detectMultiScale(gray,1.25,3)
     for x,y,b,h in caras:
         # cv.rectangle(gray, (x,y), (x+b,y+h), (255, 0 , 0), 2)
         rostro_capture= idCapture[y:y+h,x:x+b]

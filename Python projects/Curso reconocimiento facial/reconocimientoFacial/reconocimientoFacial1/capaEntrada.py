@@ -6,7 +6,7 @@ import imutils
 #declaramos rutas
 
 #PONEMOS NOMBRE A LA CARPETA
-modelo= 'fotos elon'
+modelo= 'Elon Musk'
 ruta1= 'C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/dataFotos'
 rutaCompleta =ruta1 +'/'+ modelo
 #ruidos de archivo xml
@@ -35,7 +35,7 @@ while True:
     gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
 
     #detectamos las caras
-    caras =ruidos.detectMultiScale(gray,1.3,5)
+    caras =ruidos.detectMultiScale(gray,1.25,3)
 
     #fuente de la letra del video
     font=cv.FONT_HERSHEY_DUPLEX
@@ -58,7 +58,7 @@ while True:
     cv.imshow('Resultado', enVivo)
     # cv.waitKey(200)
     #cerrar programa
-    if id == 51:
+    if id == 201:
         break
     # if cv.waitKey(1) == ord('q'):
     #     break
