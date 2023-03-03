@@ -7,7 +7,7 @@ Contenedores_Fotos_ruta = 'C:/Users/juana/Dropbox/GIT/practice-with-python/Pytho
 listRuta= os.listdir(Contenedores_Fotos_ruta)
 
 entrenamientoEigenFaceRecognizer= cv.face.EigenFaceRecognizer_create()
-entrenamientoEigenFaceRecognizer.read('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/EntrenamientoEigenFaceRecognizer.xml')
+entrenamientoEigenFaceRecognizer.read('C:/Users/juana/Dropbox/GIT/Train-RecFacial/test_one/EntrenamientoEigenFaceRecognizer.xml')
 ruidos = cv.CascadeClassifier('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/Modelos de entrenamiento/haarcascade_frontalface_default.xml')
 
 camera = cv.VideoCapture(0)
@@ -20,7 +20,13 @@ while True:
         break
     gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
     idCapture= gray.copy()
-    caras =ruidos.detectMultiScale(gray,1.25,3)
+    
+    #detectamos las caras
+    caras =ruidos.detectMultiScale(gray,
+        scaleFactor=1.29,
+        minNeighbors=4,
+        minSize=[30,30])
+    
     for x,y,b,h in caras:
         # cv.rectangle(gray, (x,y), (x+b,y+h), (255, 0 , 0), 2)
         rostro_capture= idCapture[y:y+h,x:x+b]
