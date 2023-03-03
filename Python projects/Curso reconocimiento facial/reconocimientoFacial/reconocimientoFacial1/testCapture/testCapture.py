@@ -21,7 +21,10 @@ while True:
     gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
 
     #detectamos las caras
-    caras =ruidos.detectMultiScale(gray,1.25,5)
+    caras =ruidos.detectMultiScale(gray,
+        scaleFactor=1.29,
+        minNeighbors=4,
+        minSize=[30,30])
 
     #fuente de la letra del video
     font=cv.FONT_HERSHEY_DUPLEX
