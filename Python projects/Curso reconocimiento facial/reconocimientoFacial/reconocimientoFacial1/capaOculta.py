@@ -3,7 +3,7 @@ import os
 import numpy as np
 from time import time
 
-dataRuta = 'C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\dataFotos'
+dataRuta = 'C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/dataFotos'
 listaData = os.listdir(dataRuta)
 # print(listaData)
 ids = []
@@ -15,7 +15,7 @@ TiempoInicial = time()
 # bucle para acceder a las sub carpetas
 for subCarpetas in listaData:
     # entramos en las carpetas contenedoras de img
-    rutaCompleta = dataRuta + '\\' + subCarpetas
+    rutaCompleta = dataRuta + '/' + subCarpetas
 
     print('Iniciando lecturas... ')  # damos inicio a las lecturas de archivos
     # bucle para acceder a los archivos de las sub carpetas
@@ -25,7 +25,7 @@ for subCarpetas in listaData:
         # diferenciar las imagenes de cada carpeta contenedora de imagenes
         ids.append(id)
         # pasar las img a escala de grises(sobreescribiendolo) y acceder a cada archivo
-        rostrosData.append(cv.imread(rutaCompleta + '\\' + archivo, 0))
+        rostrosData.append(cv.imread(rutaCompleta + '/' + archivo, 0))
 
     id = id+1   # para darle diferencias a cada carpeta contenedora de imagenes
     tiempoFinalLectura = time()  # tiempo final donde se finalizaron las lecturas
@@ -43,5 +43,5 @@ tiempoTotalEntrenamiento = tiempoFinalEntrenamiento - tiempoTotalLectura
 # imprimimos el tiempo total del training
 print('Tiempo total Entrenamiento: ', tiempoTotalEntrenamiento)
 # escribimos como se va a nombrar el archivo creado
-entrenamientoEigenFaceRecognizer.write('C:\\Users\\juana\\Dropbox\\GIT\\practice-with-python\\Python projects\\Curso reconocimiento facial\\reconocimientoFacial\\reconocimientoFacial1\\EntrenamientoEigenFaceRecognizer.xml')
+entrenamientoEigenFaceRecognizer.write('C:/Users/juana/Dropbox/GIT/Train-RecFacial/test_one/EntrenamientoEigenFaceRecognizer.xml')
 print('Entrenamiento completado...')  # finalizamos training
