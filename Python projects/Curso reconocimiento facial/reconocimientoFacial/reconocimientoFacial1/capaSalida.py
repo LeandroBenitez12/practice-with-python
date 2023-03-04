@@ -1,5 +1,6 @@
 import cv2 as cv
 import os
+import imutils
 min_Result_Lean = 14000
 max_Result_Lean = 22000
 font=cv.FONT_HERSHEY_DUPLEX
@@ -11,15 +12,21 @@ entrenamientoEigenFaceRecognizer= cv.face.EigenFaceRecognizer_create()
 entrenamientoEigenFaceRecognizer.read('C:/Users/juana/Dropbox/GIT/Train-RecFacial/test_one/EntrenamientoEigenFaceRecognizer.xml')
 ruidos = cv.CascadeClassifier('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/Modelos de entrenamiento/haarcascade_frontalface_default.xml')
 
-camera = cv.VideoCapture(0)
+#En vivo le decimos que la video captura es interna (0)
+# camara = cv.VideoCapture(0)
+#video Auron
+camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/videoauron.mp4')
+#video Elon
+# camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/ElonMusk.mp4')
 
 while True:
 
-    respuesta, enVivo= camera.read()
+    respuesta, enVivo= camara.read()
 
     if respuesta == False:
         break
-    gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
+    enVivo = imutils.resize(enVivo, width = 640)
+    gray= cv.cvtColor(enVivo, cv.COLOR_BGR2GRAY)
     idCapture= gray.copy()
     
     #detectamos las caras
@@ -46,5 +53,5 @@ while True:
     if cv.waitKey(1) == ord('s'):
         break
 
-enVivo.release()
+camara.release()
 cv.destroyAllWindows()

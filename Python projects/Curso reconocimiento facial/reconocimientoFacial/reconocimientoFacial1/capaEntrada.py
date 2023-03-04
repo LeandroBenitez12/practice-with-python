@@ -32,7 +32,7 @@ while True:
     if respuesta == False:
         break
     #Pasamos el video a escala de grises
-    gray= cv.cvtColor(enVivo, cv.COLOR_RGB2GRAY)
+    gray= cv.cvtColor(enVivo, cv.COLOR_BGR2GRAY)
 
     #detectamos las caras
     caras =ruidos.detectMultiScale(gray,
