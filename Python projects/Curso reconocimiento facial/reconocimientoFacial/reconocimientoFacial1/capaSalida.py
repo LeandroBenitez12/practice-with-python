@@ -25,7 +25,7 @@ while True:
 
     if respuesta == False:
         break
-    enVivo = imutils.resize(enVivo, width = 640)
+    enVivo = imutils.resize(enVivo, width = 480)
     gray= cv.cvtColor(enVivo, cv.COLOR_BGR2GRAY)
     idCapture= gray.copy()
     

@@ -6,7 +6,7 @@ import imutils
 #declaramos rutas
 
 #PONEMOS NOMBRE A LA CARPETA
-modelo= 'Leandro Benitez'
+modelo= 'Auron'
 ruta1= 'C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/dataFotos'
 rutaCompleta =ruta1 +'/'+ modelo
 #ruidos de archivo xml
@@ -17,18 +17,18 @@ if not os.path.exists(rutaCompleta):
     os.makedirs(rutaCompleta)
 
 #En vivo le decimos que la video captura es interna (0)
-camara = cv.VideoCapture(0)
+# camara = cv.VideoCapture(0)
 #video Auron
-# camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/videoauron.mp4')
+camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/videoauron.mp4')
 #video Elon
 # camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/ElonMusk.mp4')
 #cuenta las capturas
-id = 150
+id = 0
 while True:
     #Encontramos la camara
     respuesta, enVivo = camara.read()
     #bajamos resolucion para que no pese tanto al img
-    enVivo= imutils.resize(enVivo, width= 640)
+    enVivo= imutils.resize(enVivo, width= 480)
     if respuesta == False:
         break
     #Pasamos el video a escala de grises
@@ -36,9 +36,8 @@ while True:
 
     #detectamos las caras
     caras =ruidos.detectMultiScale(gray,
-        scaleFactor=1.29,
-        minNeighbors=4,
-        minSize=[30,30])
+        scaleFactor=1.3,
+        minNeighbors=4)
     #fuente de la letra del video
     font=cv.FONT_HERSHEY_DUPLEX
 
