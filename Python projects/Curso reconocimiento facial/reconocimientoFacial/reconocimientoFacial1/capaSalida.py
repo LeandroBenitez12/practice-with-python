@@ -15,11 +15,11 @@ ruidos = cv.CascadeClassifier(
     'C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/Modelos de entrenamiento/haarcascade_frontalface_default.xml')
 
 # En vivo le decimos que la video captura es interna (0)
-# camara = cv.VideoCapture(0)
+camara = cv.VideoCapture(0)
 # video Auron
 # camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/videoauron.mp4')
 # video Elon
-camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/ElonMusk.mp4')
+# camara = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Curso reconocimiento facial/reconocimientoFacial/reconocimientoFacial1/videos/ElonMusk.mp4')
 
 while True:
 
@@ -47,7 +47,7 @@ while True:
         if resultado[1] < max_Result:
             cv.rectangle(enVivo, (x, y), (x+b, y+h), (0, 255, 0), 2)
             cv.putText(enVivo, f'The person is: {listRuta[resultado[0]]}', (
-                x, y-40), 2, 0.7, (0, 0, 0), 1, cv.LINE_AA)
+                x, y-40), 2, 0.7, (255, 0, 0), 1, cv.LINE_AA)
 
         else:
             cv.rectangle(enVivo, (x, y), (x+b, y+h), (0, 0, 255), 2)
