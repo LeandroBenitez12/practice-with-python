@@ -51,8 +51,9 @@ while True:
         captureFace = id_capture[y:y+h,x:x+b]
         captureFace = cv.resize(captureFace, (160,160),interpolation=cv.INTER_CUBIC)
         cv.imwrite(pathPerson+f'/img_{id}.jpg', captureFace)
+
         id= id +1
-    cv.imshow('Capturing...', cameraOn)
+    cv.imread('Capturing...', cameraOn)
     if id > max_id: break
     
 camera.release()
