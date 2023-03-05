@@ -8,7 +8,7 @@ max_id = 351
 
 #paths 
 nameFolder='Auron'
-pathFolders= 'C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/dataPhotos'
+pathFolders= 'D:/dataPhotos'
 pathPerson= pathFolders + '/' + nameFolder
 
 
