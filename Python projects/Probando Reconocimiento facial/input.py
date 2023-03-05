@@ -7,7 +7,7 @@ NOISE = cv.CascadeClassifier('C:/Users/juana/Dropbox/GIT/practice-with-python/Py
 max_id = 351
 
 #paths 
-nameFolder='Auron'
+nameFolder='Leandro'
 pathFolders= 'D:/dataPhotos'
 pathPerson= pathFolders + '/' + nameFolder
 
@@ -20,7 +20,7 @@ if not os.path.exists(pathPerson):
 # camera = cv.VideoCapture(0)
 
 # video Auron
-camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/videoauron.mp4')
+# camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/videoauron.mp4')
 
 # video Elon
 # camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/ElonMusk.mp4')
@@ -32,7 +32,7 @@ camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python
 # camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/Juan.mp4')
 
 # video Leandro
-# camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/Leandro.mp4')
+camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/Leandro.mp4')
 id=0
 while True:
     answer, cameraOn = camera.read()
@@ -49,7 +49,7 @@ while True:
     for (x,y,h,b) in faces:
         cv.rectangle(cameraOn, (x,y), (x+h,y+b), (0,100,0),2)
         captureFace = id_capture[y:y+h,x:x+b]
-        captureFace = cv.resize(captureFace, [600,600],interpolation=cv.INTER_CUBIC)
+        captureFace = cv.resize(captureFace, (160,160),interpolation=cv.INTER_CUBIC)
         cv.imwrite(pathPerson+f'/img_{id}.jpg', captureFace)
         id= id +1
     cv.imshow('Capturing...', cameraOn)
