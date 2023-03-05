@@ -7,7 +7,7 @@ NOISE = cv.CascadeClassifier('C:/Users/juana/Dropbox/GIT/practice-with-python/Py
 max_id = 351
 
 #paths 
-nameFolder='Leandro'
+nameFolder='Auron'
 pathFolders= 'C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/dataPhotos'
 pathPerson= pathFolders + '/' + nameFolder
 
@@ -50,9 +50,9 @@ while True:
         cv.rectangle(cameraOn, (x,y), (x+h,y+b), (0,100,0),2)
         captureFace = id_capture[y:y+h,x:x+b]
         captureFace = cv.resize(captureFace, [600,600],interpolation=cv.INTER_CUBIC)
-        cv.imwrite(pathPerson+'/img_{id}.jpg', captureFace)
+        cv.imwrite(pathPerson+f'/img_{id}.jpg', captureFace)
         id= id +1
-    cv.imread('Capturing...', cameraOn)
+    cv.imshow('Capturing...', cameraOn)
     if id > max_id: break
     
 camera.release()
