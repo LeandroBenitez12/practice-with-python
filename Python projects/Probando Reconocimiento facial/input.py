@@ -20,19 +20,19 @@ if not os.path.exists(pathPerson):
 # camera = cv.VideoCapture(0)
 
 # video Auron
-camera = cv.VideoCapture('D:/test/9+CodigoFuente/reconocimientofacial1/videos/videoauron.mp4')
+camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/videoauron.mp4')
 
 # video Elon
-# camera = cv.VideoCapture('D:/test/9+CodigoFuente/reconocimientofacial1/videos/ElonMusk.mp4')
+# camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/ElonMusk.mp4')
 
 # video Juana
-# camera = cv.VideoCapture('D:/test/9+CodigoFuente/reconocimientofacial1/videos/Juana.mp4')
+# camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/Juana.mp4')
 
 # video Juan
-# camera = cv.VideoCapture('D:/test/9+CodigoFuente/reconocimientofacial1/videos/Juan.mp4')
+# camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/Juan.mp4')
 
 # video Leandro
-# camera = cv.VideoCapture('D:/test/9+CodigoFuente/reconocimientofacial1/videos/Leandro.mp4')
+# camera = cv.VideoCapture('C:/Users/juana/Dropbox/GIT/practice-with-python/Python projects/Probando Reconocimiento facial/videos/Leandro.mp4')
 id=0
 while True:
     answer, cameraOn = camera.read()
