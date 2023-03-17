@@ -1,7 +1,8 @@
 
-PIEDRA = 0
-PAPEL = 1
-TIJERA = 2
+PIEDRA = 1
+PAPEL = 2
+TIJERA = 3
+
 MIN_VALOR = 0
 MAX_VALOR = 3
 repeticiones = int(input('Introduzca el numero de repeticiones(Impar): '))
@@ -48,9 +49,12 @@ while id < repeticiones:
             resultado = 'Ganador de ronda: Jugador Nº1 '
             rondas_ganadas_jugador_1 += 1
             print(resultado + f', Rondas ganadas acumuludas : {rondas_ganadas_jugador_1}')
-
         
-    id += 1
+        id += 1
+    else:
+        print('Error , no existe la opcion para el numero ingresado')
+        
+    
     if id == repeticiones :
         if rondas_ganadas_jugador_1 < rondas_ganadas_jugador_2:
             resultado = 'Ganador jugador 2'
