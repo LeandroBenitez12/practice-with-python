@@ -17,6 +17,10 @@ def getGrilla(min_dist_borde, max_dist_borde,separacionGrillas):
     for y in range( min_dist_borde, max_dist_borde, separacionGrillas):
         arc.draw_line(start_x=min_dist_borde,start_y=y, end_x=max_dist_borde, end_y=y, color=arc.color.BLUE_BELL, line_width= 3)
 
+def getpoint(x,y):
+    arc.draw_text('Draw point', x, y, arc.color.BLACK)
+    arc.draw_point()
+
 # abrir ventana
 arc.open_window(SCREEN_ANCHO, SCREEN_LARGO, SCREEN_TITULO)
 
