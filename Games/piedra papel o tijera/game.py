@@ -6,6 +6,9 @@ TIJERA = 3
 MIN_VALOR = 0
 MAX_VALOR = 3
 repeticiones = int(input('Introduzca el numero de repeticiones(Impar): '))
+
+for i in range(2, repeticiones):
+    repeticiones = repeticiones % 2
 resultado= 'Empezemos el juego...'
 print(resultado)
 id = 0
