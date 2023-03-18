@@ -5,11 +5,12 @@
 import arcade
 
 # Constants
-SCREEN_WIDTH = 1024
-SCREEN_HEIGHT = 720
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 800
 SCREEN_TITLE = "Welcome to Arcade"
-x = 200
-y = 200
+x = 100
+y = 100
+
 # Open the window
 arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
 
@@ -19,13 +20,18 @@ arcade.set_background_color(arcade.color.BLACK)
 # Clear the screen and start drawing
 arcade.start_render()
 
-# Draw a blue circle
-arcade.draw_rectangle_filled(
-    SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, x, y, arcade.color.BLUE
+# Draw a blue rectangle
+arcade.draw_rectangle_outline(
+    SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2, x, y, arcade.color.BLUE
+)
+
+# Draw a yellow rectangle
+arcade.draw_rectangle_outline(
+    600, SCREEN_HEIGHT / 2, x, y, arcade.color.YELLOW
 )
 
 # Finish drawing
 arcade.finish_render()
 
-# Display everything
+# muestra ventana
 arcade.run()
