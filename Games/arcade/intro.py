@@ -30,6 +30,10 @@ for x in range(0, 601, 200):
 for y in range(0, 601, 200):
     arcade.draw_line(0, y, 600, y, arcade.color.WHITE, 2)
 
+# Draw a point
+arcade.draw_text("draw_point", 5, 405, arcade.color.BLACK, 12)
+arcade.draw_point(100, 500, arcade.color.RED, 10)
+
 # # Draw a blue rectangle
 # arcade.draw_rectangle_outline(
 #     SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2, x_rec, y_rec, arcade.color.BLUE
