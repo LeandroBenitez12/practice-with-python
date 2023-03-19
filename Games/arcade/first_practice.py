@@ -25,6 +25,19 @@ def getPoint():
     arc.draw_text('Draw point', x_text, y_text, arc.color.BLACK)
     arc.draw_point(x_point, y_point, arc.color.GREEN, 10)
 
+def drawPoints():
+    x_text = 308
+    y_text =  504
+    arc.draw_text('Draw of various points',x_text, y_text, arc.color.BLACK)
+    listPoint = (
+        (380, 575),
+        (380, 600),
+        (420, 625),
+        (420, 650)       
+    )
+    arc.draw_points(listPoint, arc.color.BLEU_DE_FRANCE, 10)
+
+
 # abrir ventana
 arc.open_window(SCREEN_ANCHO, SCREEN_LARGO, SCREEN_TITULO)
 
@@ -36,8 +49,11 @@ arc.start_render()
 # dibujo matriz de 3 x 3 para poner las figuras
 getMatriz(min_dist_borde=100, max_dist_borde= 701, separacionMatrices= 200)
 
-# dijuo en la primera fila primera columna un 
+# dibujo en la primera fila primera columna  
 getPoint()
+
+# dibujo varios puntos 
+drawPoints()
 # deja de dibujar
 arc.finish_render()
 
