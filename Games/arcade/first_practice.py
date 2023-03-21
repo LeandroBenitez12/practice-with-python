@@ -37,6 +37,11 @@ def drawPoints():
     )
     arc.draw_points(listPoint, arc.color.BLEU_DE_FRANCE, 10)
 
+def drawRectangle():
+    x_text = 508
+    y_text =  504
+    arc.draw_text('Draw Rectangle',x_text, y_text, arc.color.BLACK)
+    arc.draw_rectangle(x_text, y_text, arc.color.BLUE_BELL)
 
 # abrir ventana
 arc.open_window(SCREEN_ANCHO, SCREEN_LARGO, SCREEN_TITULO)
@@ -54,6 +59,10 @@ getPoint()
 
 # dibujo varios puntos 
 drawPoints()
+
+# dibujo rectangulo
+drawRectangle()
+
 # deja de dibujar
 arc.finish_render()
 
