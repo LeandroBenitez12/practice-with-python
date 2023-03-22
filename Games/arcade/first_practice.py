@@ -47,6 +47,43 @@ def drawRectangle():
     arc.draw_text('Draw Rectangle',x_text, y_text, arc.color.BLACK)
     arc.draw_rectangle_outline(position_x , position_y, width , height, arc.color.BLUE_BELL)
     arc.draw_rectangle_filled(625 , 625, width , height, arc.color.BLEU_DE_FRANCE)
+
+#dibujar circulo
+def drawCircle():
+    x_text = 110
+    y_text =  304
+    arc.draw_text('Draw Circle', x_text, y_text, arc.color.BLACK)
+    arc.draw_circle_outline(200, 400, 50, arc.color.BLUE_BELL)
+    arc.draw_circle_filled(225, 425, 50, arc.color.BLACK_BEAN)
+
+def drawLine():
+    # Draw a line
+    arc.draw_text("draw_line", 310, 304, arc.color.BLACK, 12)
+    arc.draw_line(300, 300, 500, 500, arc.color.WARM_BLACK, 3)
+
+def variousLines():
+    arc.draw_text("draw_lines", 410, 304, arc.color.BLACK, 12)
+    listLnes = ( 
+        (505, 370),
+        (505, 430),
+        (520, 370),
+        (520, 430),
+        (540, 370),
+        (540, 430),
+        (580, 370),
+        (580, 430),
+        (605, 370),
+        (605, 430),
+        (620, 370),
+        (620, 430),
+        (640, 370),
+        (640, 430),
+        (680, 370),
+        (680, 430),
+        (695, 370),
+        (695, 430)
+    )
+    arc.draw_lines(listLnes, arc.color.RED_DEVIL, 3)
 # abrir ventana
 arc.open_window(SCREEN_ANCHO, SCREEN_LARGO, SCREEN_TITULO)
 
@@ -66,6 +103,15 @@ drawPoints()
 
 # dibujo rectangulo
 drawRectangle()
+
+# dibujo circulo
+drawCircle()
+
+# dibujo linea
+drawLine()
+
+variousLines()
+
 
 # deja de dibujar
 arc.finish_render()
