@@ -84,6 +84,15 @@ def variousLines():
         (695, 430)
     )
     arc.draw_lines(listLnes, arc.color.RED_DEVIL, 3)
+
+def drawImg():
+    # Load and draw an image to the screen
+    # Image from kenney.nl asset pack #1
+    arc.draw_text("draw_mario bros", 605, 103, arc.color.BLACK, 12)
+    texture = arc.load_texture("mario_bros.png")
+    scale = .6
+    arc.draw_scaled_texture_rectangle(700, 120, texture, scale, 0)
+    arc.draw_scaled_texture_rectangle(700, 160, texture, scale, 45)
 # abrir ventana
 arc.open_window(SCREEN_ANCHO, SCREEN_LARGO, SCREEN_TITULO)
 
@@ -110,7 +119,11 @@ drawCircle()
 # dibujo linea
 drawLine()
 
+#dibujo varias lineas
 variousLines()
+
+# dibujo imagen
+drawImg()
 
 
 # deja de dibujar
