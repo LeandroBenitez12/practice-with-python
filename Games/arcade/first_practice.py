@@ -45,8 +45,8 @@ def drawRectangle():
     width = 50
     height = 50
     arc.draw_text('Draw Rectangle',x_text, y_text, arc.color.BLACK)
-    arc.draw_rectangle_filled(position_x , position_y, width , height, arc.color.BLUE_BELL)
-
+    arc.draw_rectangle_outline(position_x , position_y, width , height, arc.color.BLUE_BELL)
+    arc.draw_rectangle_filled(625 , 625, width , height, arc.color.BLEU_DE_FRANCE)
 # abrir ventana
 arc.open_window(SCREEN_ANCHO, SCREEN_LARGO, SCREEN_TITULO)
 
