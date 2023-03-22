@@ -38,10 +38,14 @@ def drawPoints():
     arc.draw_points(listPoint, arc.color.BLEU_DE_FRANCE, 10)
 
 def drawRectangle():
+    position_x = 600
+    position_y = 600
     x_text = 508
     y_text =  504
+    width = 50
+    height = 50
     arc.draw_text('Draw Rectangle',x_text, y_text, arc.color.BLACK)
-    arc.draw_rectangle(x_text, y_text, arc.color.BLUE_BELL)
+    arc.draw_rectangle_filled(position_x , position_y, width , height, arc.color.BLUE_BELL)
 
 # abrir ventana
 arc.open_window(SCREEN_ANCHO, SCREEN_LARGO, SCREEN_TITULO)

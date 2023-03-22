@@ -35,7 +35,6 @@ arcade.draw_text("draw_point", 5, 405, arcade.color.BLACK, 12)
 arcade.draw_point(100, 500, arcade.color.RED, 10)
 
 # draw list of points 
-a
 # # Draw a blue rectangle
 # arcade.draw_rectangle_outline(
 #     SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2, x_rec, y_rec, arcade.color.BLUE
