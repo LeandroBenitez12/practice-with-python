@@ -49,3 +49,8 @@ print_variable(my_set)
 
 # tuple , una forma de almacenar valores que no puedan cambiar, esten ordenados y se puedan repetir
 my_tuple ={my_string_full_name, my_int, my_bool, False,  my_float, my_double, my_double, my_string_full_name, my_edad, my_string_full_name}
+
+print("----------------------------------------------------------------")
+
+for my_item in my_list:
+    print_variable(my_item)
