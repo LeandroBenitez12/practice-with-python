@@ -44,13 +44,47 @@ print_variable(my_dic)
 print_variable(my_dic["edad"])
 
 #set , permite no duplicar los valores y te entrega la info de forma desordenada
-my_set = {my_string_full_name, my_int, my_bool, False,  my_float, my_double, my_double, my_string_full_name, my_edad, my_string_full_name}
+my_set = {my_string_full_name, my_int, my_bool, False,  my_float, my_double, my_double, "Gabriel", my_edad, my_string_full_name}
 print_variable(my_set)
 
 # tuple , una forma de almacenar valores que no puedan cambiar, esten ordenados y se puedan repetir
-my_tuple ={my_string_full_name, my_int, my_bool, False,  my_float, my_double, my_double, my_string_full_name, my_edad, my_string_full_name}
+my_tuple ={my_string_full_name, my_int, my_bool, False,  my_float, my_double, my_double, "Gabriel", my_edad, my_string_full_name}
 
 print("----------------------------------------------------------------")
 
-for my_item in my_list:
-    print_variable(my_item)
+def print_my_item(param):
+    for my_item in param:
+        print(my_item)
+    return my_item
+
+print_my_item(my_list)
+
+print("----------------------------------------------------------------")
+
+class DataType:
+    def __init__(self, name, last_name, age, height_and_weight):
+        self.__name = name
+        self.__last_name = last_name
+        self.__age = age
+        self.__height_and_weight = height_and_weight
+
+    def printName(self):
+        print(self.__name)
+        
+    def printlastName(self):
+        print(self.__last_name)
+
+    def printAge(self):
+        print(self.__age)
+
+    def printHnW(self):
+        print(f'Su altura es: {self.__height_and_weight[0]} y su Peso: {self.__height_and_weight[1]}')
+        
+DataLeandro = DataType("Leandro", "Benitez", 19, [179, 80.6])
+DataAgustin = DataType("Agustin", "Benitez", 59, [185, 89.6])
+
+DataLeandro.printName()
+DataLeandro.printHnW()
+
+DataAgustin.printlastName()
+DataAgustin.printAge()
