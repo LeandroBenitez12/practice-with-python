@@ -6,4 +6,8 @@ try:
     print(f" La suma del numero {number_one} + {numbre_two} es igual a {number_one + numbre_two} ")
     print("No ocurrio error")
 except:
-    print("Ha ocurrido un error")
+    print("Ha ocurrido un error") # si ocurre Exception imprime
+else: # Opcional
+    print("El programa sigue bien") # se ejecuta si no ocurrio Exceptions
+finally: # Opcional
+    print("el programa continua") # se ejecuta siempre 
