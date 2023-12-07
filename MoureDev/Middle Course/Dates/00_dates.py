@@ -37,3 +37,9 @@ for i in my_list:
 
 my_list2 = [i + 1 for i in range(5)]
 print(my_list2)
+
+my_list2 = [i * i for i in range(5)]
+print(my_list2)
+
+my_list2 = [i * 3 for i in range(5)]
+print(my_list2)
