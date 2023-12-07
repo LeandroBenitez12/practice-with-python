@@ -88,3 +88,46 @@ DataLeandro.printHnW()
 
 DataAgustin.printlastName()
 DataAgustin.printAge()
+
+inicio = 1
+fin = 101
+
+for i in range(inicio, fin):
+    if(i % 5 == 0 and i % 3 == 0):
+        print("FizzBuzz")
+    elif(i % 5  == 0):
+        print("Buzz")
+    elif(i % 3 == 0):
+        print("Fizz")
+    else:
+        print(f" El numero es:  {i} ")
+    
+#Funciones
+language = "HOLSA"
+# primera letra mayuscula
+print(language.capitalize())
+# Todo en mayusculas
+print(language.upper())
+# contar letras o -
+print(language.count(''))
+#si es numero
+print(language.isnumeric())
+# minusculas
+print(language.lower())
+
+my_list2 = ['Leandro', 'Juana', 'Juan', 'Jose', 'Gabriel', 'Hernan']
+
+print(my_list2)
+elemento_eliminado = my_list2.pop()
+print(my_list2)
+print(f' el elemento eliminado es: {elemento_eliminado}')
+
+# elimina por indice 
+del my_list2[2]
+print(my_list2)
+
+# elimina por elemento 
+my_list2.remove('Leandro')
+print(my_list2)
+
+
