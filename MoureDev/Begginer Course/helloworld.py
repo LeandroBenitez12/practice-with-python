@@ -130,4 +130,13 @@ print(my_list2)
 my_list2.remove('Leandro')
 print(my_list2)
 
+#agregar el elemento al final
+my_list2.append('Leandrito')
+print(my_list2)
 
+# insertar elemento donde quiera
+my_list2.insert(0, '13')
+print(my_list2)
+
+#elementos de la lista
+print(len(my_list2))
