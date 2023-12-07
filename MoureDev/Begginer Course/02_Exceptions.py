@@ -11,3 +11,16 @@ else: # Opcional
     print("El programa sigue bien") # se ejecuta si no ocurrio Exceptions
 finally: # Opcional
     print("el programa continua") # se ejecuta siempre 
+
+
+# Tipos de Exceptions
+
+try:
+    print(f'la suma es: {5 +'count'}')
+except TypeError:
+    print('Error de tipeado PAA')
+except ValueError:
+    print('Error de valor PAAa')
+finally:
+    print('Seguimo')
+
