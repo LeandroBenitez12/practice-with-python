@@ -17,10 +17,12 @@ finally: # Opcional
 
 try:
     print(f'la suma es: {5 +'count'}')
-except TypeError:
-    print('Error de tipeado PAA')
+except TypeError as e:
+    print(f'Error de tipeado PAA: {e}')
 except ValueError:
     print('Error de valor PAAa')
+except Exception as e:
+    print(f'Error general PAA: {e}')
 finally:
     print('Seguimo')
 
