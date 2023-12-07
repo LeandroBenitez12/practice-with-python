@@ -36,6 +36,6 @@ def is_anagram(word_one, word_two):
     elif( sorted(word_one) == sorted(word_two)):
         return print(f" The words {sorted(word_one)} and {sorted(word_two)} are anagrams")
     else:
-        print("The words aren't anagrams")
+        print(f" The words {sorted(word_one)} and {sorted(word_two)} aren't anagrams")
     
 is_anagram(word_one, word_two)
