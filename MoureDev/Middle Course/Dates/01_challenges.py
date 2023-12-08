@@ -52,3 +52,17 @@ def fibonacci():
         numero_actual = fibonacci
         
 fibonacci()
+
+def primes_numbers(min_numero, max_numero):
+    prime_number_cont = 0
+    for i in range(min_numero, max_numero):
+        
+        if i % 2 != 0 or i % 3 != 0 or i % 5 != 0:
+            prime_number_cont +=1
+            if i <= 1:
+                print(1)
+            print(f"Is prime number -> {i}")
+        else:
+            print(i)
+    print(f' The primes numbers are -> {prime_number_cont}')
+primes_numbers(1, 100)
