@@ -63,6 +63,7 @@ def primes_numbers():
             for divisor in range(2, number):
                 if(number % divisor == 0):
                     is_prime = False
+                    break
                     
         if (is_prime):
             count_prime+=1
