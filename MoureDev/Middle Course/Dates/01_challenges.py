@@ -24,8 +24,8 @@ verdadero o falso (Bool) según sean o no anagramas.
 - NO hace falta comprobar que ambas palabras existan.
 - Dos palabras exactamente iguales no son anagrama.
 """
-word_one = str(input('Write a word: '))
-word_two = str(input('Write a word: '))
+#word_one = str(input('Write a word: '))
+#word_two = str(input('Write a word: '))
 
 def is_anagram(word_one, word_two):
     word_one = word_one.lower()
@@ -38,4 +38,17 @@ def is_anagram(word_one, word_two):
     else:
         print(f" The words {sorted(word_one)} and {sorted(word_two)} aren't anagrams")
     
-is_anagram(word_one, word_two)
+# is_anagram(word_one, word_two)
+
+
+
+def fibonacci():
+    numero_previo = 0
+    numero_actual = 1
+    for i in range(50):
+        print(f'El index es : {i} , y el numero fibonacci es {numero_previo}')
+        fibonacci = numero_previo + numero_actual
+        numero_previo = numero_actual
+        numero_actual = fibonacci
+        
+fibonacci()
