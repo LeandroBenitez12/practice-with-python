@@ -53,16 +53,24 @@ def fibonacci():
         
 fibonacci()
 
-def primes_numbers(min_numero, max_numero):
-    prime_number_cont = 0
-    for i in range(min_numero, max_numero):
-        
-        if i % 2 != 0 or i % 3 != 0 or i % 5 != 0:
-            prime_number_cont +=1
-            if i <= 1:
-                print(1)
-            print(f"Is prime number -> {i}")
+def primes_numbers():  
+    count_prime = 0 
+    for number in range(1, 101): #8
+        is_prime = True
+        if( number == 0 or number == 1):
+            is_prime = False
+        if(number >= 2):      
+            for divisor in range(2, number):
+                if(number % divisor == 0):
+                    is_prime = False
+                    
+        if (is_prime):
+            count_prime+=1
+            print(f'The number {number} is prime')
         else:
-            print(i)
-    print(f' The primes numbers are -> {prime_number_cont}')
-primes_numbers(1, 100)
+            print(f'The number {number} is not prime')
+    print(f'Count prime numbers =  {count_prime}')
+
+primes_numbers()
+
+        
