@@ -74,4 +74,14 @@ def primes_numbers():
 
 primes_numbers()
 
+greeting = 'Holaa soy lean'
         
+def invert_string(saludo):
+    text_len = len(saludo)
+    reverse_text = ''
+    for i in range(text_len):
+        reverse_text += saludo[text_len - i -1]
+        print(reverse_text)
+    return reverse_text
+
+print(invert_string(greeting))
