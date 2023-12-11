@@ -51,11 +51,11 @@ def sum_list(lista: list):
     if not isinstance(lista, list):
         raise TypeError("El argumento debe ser una lista")
     result = 0
-    for i in lista:
-        result = i + result     
+    for lista in lista:
+        result = lista + result     
     return result
 
-print(sum_list([6,0,4,3]))
+print(sum_list([6,0,4,-3]))
 
 def mult_list(lista: list):
     if not isinstance(lista, list):
@@ -65,4 +65,41 @@ def mult_list(lista: list):
         result = i*result
     return result
 
-print(mult_list([1,2,4,3]))
+print(mult_list([1,2,-4,-3]))
+
+def dereversaMami(text: str):
+    text = list(text)
+    inverso = ''
+    for caracter in range(0, len(text)):
+        inverso += text[len(text) - caracter - 1]
+    return inverso
+
+print(dereversaMami("Leandro"))
+
+def es_palindromo(text):
+    text_inverso = dereversaMami(text)
+    if text == text_inverso:
+        return True
+    else:
+        return False
+
+# print(es_palindromo('RADAR'))
+
+def superposicion(lista1, lista2):
+    """for elemento1 in lista1:
+        for elemento2 in lista2:
+            if elemento1 == elemento2:
+                return True"""
+    for elemento1 in lista1:
+        if elemento1 in lista2:
+            return True
+    
+    
+print(f'Superposicion:  {superposicion([1,2,3], [0,6,0])}')
+
+def histograma(lista):
+    for n in lista:
+        print(n * '*')
+    
+        
+print(histograma([4,3,2,1,0]))
