@@ -17,11 +17,11 @@ def maxFunction(n1: int , n2: int):
 print(maxFunction(0,7))
 
 def maxThree(n1: int, n2: int, n3: int):
-    if n1 > n2 > n3:
+    if n1 > n2 and n1 > n3:
         return n1
-    elif n1 < n2 > n3:
+    elif n1 < n2 and n2 > n3:
         return n2
-    elif n1 < n2 < n3:
+    elif n1 < n3 and n2 < n3:
         return n3
     elif n1 == n2 == n3:
         raise Exception("los valores no pueden ser iguales")
@@ -39,5 +39,30 @@ def esVocal(letra: str):
     
     return False
         
-input_str = str(input("Ingrese una letra: "))
-print(esVocal(input_str))
+# input_str = str(input("Ingrese una letra: "))
+# print(esVocal(input_str))
+
+def generador_caracteres(n: int, letra: str):
+    return letra * n
+
+print(generador_caracteres(5,'s'))
+
+def sum_list(lista: list):
+    if not isinstance(lista, list):
+        raise TypeError("El argumento debe ser una lista")
+    result = 0
+    for i in lista:
+        result = i + result     
+    return result
+
+print(sum_list([6,0,4,3]))
+
+def mult_list(lista: list):
+    if not isinstance(lista, list):
+        raise TypeError("El argumento debe ser una lista")
+    result = 1
+    for i in lista:
+        result = i*result
+    return result
+
+print(mult_list([1,2,4,3]))
