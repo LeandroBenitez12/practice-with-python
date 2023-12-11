@@ -103,3 +103,11 @@ def histograma(lista):
     
         
 print(histograma([4,3,2,1,0]))
+
+def grafico(n):
+    n = -n
+    for i in range(n, 1):
+        i = abs(i)
+        print('*' * i)
+
+grafico(10)
