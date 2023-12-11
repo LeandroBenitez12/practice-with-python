@@ -32,4 +32,12 @@ print(maxThree(-15, 1 ,3))
 
 def esVocal(letra: str):
     Vocal = ['a', 'e', 'i','o','u']
-    letra = letra.upper()
+    letra = letra.lower()
+    for i in Vocal:
+        if letra == i:
+            return True
+    
+    return False
+        
+input_str = str(input("Ingrese una letra: "))
+print(esVocal(input_str))
