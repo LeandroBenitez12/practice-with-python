@@ -1,8 +1,12 @@
 {
   "name": "leandro",
-  "surname": "benitez",
+  "surname": [
+    "benitez",
+    "fernandez",
+    "canete"
+  ],
   "edad": 19,
   "lives?": true,
-  "peso": 80.7,
+  "peso": 81,
   "state": "soltero"
 }

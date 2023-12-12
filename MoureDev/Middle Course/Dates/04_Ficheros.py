@@ -1,41 +1,48 @@
 ### File handling ###
+
 # Manejo de archivos
 import os
-# .txt file
-delete_file = False
-txt_file = open("MoureDev/Middle Course/Dates/file.txt", "r+") # read and write
 
-# txt_file.write("leandro benitez\n18 años\nDNI\n46023790\n13/07/2004\nMonte grande")
+# Debugs
+delete_file_txt = False
+delete_file_json = False
+update = False
 
-#print(txt_file.readline())
-#print(txt_file.readline())
+#paths
+txt_path ='MoureDev/Middle Course/Dates/file.txt'
+json_path = 'MoureDev/Middle Course/Dates/file.json'
 
-info = []
-for i in txt_file.readlines(): 
-    info.append(i.strip()) # strip() es una funcion para eliminar caracteres vacios de cada linea
+with open(txt_path, "r+") as txt_file: # read and write
+    # txt_file.write("leandro benitez\n18 años\nDNI\n46023790\n13/07/2004\nMonte grande") 
+    info = []
+    for i in txt_file.readlines(): 
+        info.append(i.strip()) # strip() es una funcion para eliminar caracteres vacios de cada linea
+    print(info)
 
-print(info)
+if update:
+    with open(txt_path, "a") as my_other_file:
+        #my_other_file.write("\nBuenos Aires") # escribo
+        my_other_file.write("\n Tecnico Electronico")
 
-
-
-# with open("MoureDev/Middle Course/Dates/file.txt", "a") as my_other_file:
-#     my_other_file.write("\nBuenos Aires") # escribo
-#     my_other_file.write("\n Tecnico Electronico")
-if delete_file:
+if delete_file_txt:
     txt_file.close()
-    os.remove('MoureDev/Middle Course/Dates/file.txt')
+    os.remove(txt_path)
 
 import json
 
-json_file = open('MoureDev/Middle Course/Dates/file.json', 'w+') # crear archivo json
+json_file = open(json_path, 'w+') # crear archivo json
 
 json_test = { "name" : 'leandro',
-              'surname' : ['benitez', 'benitez', 'cañete'], 
+              'surname' : ['benitez', 'fernandez', 'canete'], 
               "edad" : 19 , 
               "lives?" : True , 
-              "peso": 80.7 ,
+              "peso": 81 ,
               "state": 'soltero'}
 
 # json_file.write(json_test) # error
 
 json.dump(json_test, json_file, indent=2) # escribir fichero json
+
+if delete_file_txt:
+    json_file.close()
+    os.remove(json_path)
