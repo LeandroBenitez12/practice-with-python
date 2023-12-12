@@ -71,16 +71,20 @@ json_dict = json.load(open(json_path))
 
 print(json_dict)
 
+
 # .csv file 
 
 import csv
 
 path_csv =  'MoureDev/Middle Course/Dates/file.csv'
 
-csv_file =  open(path_csv, 'w+')
+csv_file =open(path_csv, 'w+')
 
-csv_writer = csv.writer 
+csv_writer = csv.writer(csv_file)
+csv_writer.writerow(['name', 'surname', 'age', 35 , 'tututu'])
 
+
+json_file.close()
 
 
 # .xls file
