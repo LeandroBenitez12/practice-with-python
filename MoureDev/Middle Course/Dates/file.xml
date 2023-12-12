@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+    <libro>
+        <titulo>El Principito</titulo>
+        <autor>Antoine de Saint-Exupéry</autor>
+        <anio_publicacion>1943</anio_publicacion>
+    </libro>
+    <libro>
+        <titulo>Don Quijote de la Mancha</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <anio_publicacion>1605</anio_publicacion>
+    </libro>
+</libros>

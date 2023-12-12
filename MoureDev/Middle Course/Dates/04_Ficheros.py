@@ -95,12 +95,23 @@ with open (path_csv, 'r+') as my_other_file_cvs:
 
 
 # .xml file
-import xml
+import xml.etree.ElementTree as ET
 
 path_xml = 'MoureDev/Middle Course/Dates/file.xml'
-xml_file = open(path_xml, 'w+') # 'W+' ES PARA CREAR ARCHIVO SI NO LO ESTA Y ESCRIBE 
 
-xml = xml.parsers
-
-
+try: 
+    xml_file = open(path_xml) # 'W+' ES PARA CREAR ARCHIVO SI NO LO ESTA Y ESCRIBE 
+    # print(xml_file.read()) # datos sin formato
+    if xml_file.readable():
+        print(True)
+        xml_data = ET.fromstring(xml_file.read())
+        print(xml_data)
+        date_list = xml_data.findall(path_xml)
+        print(len(date_list))
+    else:
+        print(False)
+except Exception as e :
+    print(f'Error: {e}')
+finally:
+    xml_file.close()
 
