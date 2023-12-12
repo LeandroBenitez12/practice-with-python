@@ -81,11 +81,26 @@ path_csv =  'MoureDev/Middle Course/Dates/file.csv'
 csv_file =open(path_csv, 'w+')
 
 csv_writer = csv.writer(csv_file)
-csv_writer.writerow(['name', 'surname', 'age', 35 , 'tututu'])
+csv_writer.writerow(['Name', 'Surname', 'Age', 'Nationality' , 'id'])
+csv_writer.writerow(['Leandro', 'Benitez', 19 , 'Argentina' , 11060])
+csv_writer.writerow(['Juan', 'Benitez', 17 , 'Argentina' , 1964560])
+csv_writer.writerow(['Gabriel', 'Benitez', 26 , 'Argentina' , 145623])
 
 
-json_file.close()
+csv_file.close()
+
+with open (path_csv, 'r+') as my_other_file_cvs:
+    for line in my_other_file_cvs.readlines():
+        print(line)
 
 
-# .xls file
+# .xml file
+import xml
+
+path_xml = 'MoureDev/Middle Course/Dates/file.xml'
+xml_file = open(path_xml, 'w+') # 'W+' ES PARA CREAR ARCHIVO SI NO LO ESTA Y ESCRIBE 
+
+xml = xml.parsers
+
+
 
