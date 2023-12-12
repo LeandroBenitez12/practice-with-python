@@ -5,12 +5,13 @@ import os
 
 # Debugs
 delete_file_txt = False
-delete_file_json = False
 update = False
 
 #paths
 txt_path ='MoureDev/Middle Course/Dates/file.txt'
-json_path = 'MoureDev/Middle Course/Dates/file.json'
+
+
+# .txt file 
 
 with open(txt_path, "r+") as txt_file: # read and write
     # txt_file.write("leandro benitez\n18 años\nDNI\n46023790\n13/07/2004\nMonte grande") 
@@ -27,6 +28,11 @@ if update:
 if delete_file_txt:
     txt_file.close()
     os.remove(txt_path)
+
+# .json file
+
+json_path = 'MoureDev/Middle Course/Dates/file.json'
+delete_file_json = False
 
 import json
 
@@ -64,3 +70,18 @@ if delete_file_txt:
 json_dict = json.load(open(json_path))
 
 print(json_dict)
+
+# .csv file 
+
+import csv
+
+path_csv =  'MoureDev/Middle Course/Dates/file.csv'
+
+csv_file =  open(path_csv, 'w+')
+
+csv_writer = csv.writer 
+
+
+
+# .xls file
+
