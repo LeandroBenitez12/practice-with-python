@@ -107,8 +107,11 @@ try:
         xml_data = ET.fromstring(xml_file.read())
         print(xml_data)
         date_list = xml_data.findall(path_xml)
-        print(len(date_list))
-    else:
+        for elemento in date_list:
+            print(f'Libro: {elemento.find('titulo').text}')
+            print(f'Autor: {elemento.find('autor').text}')
+            print('------')
+    else:   
         print(False)
 except Exception as e :
     print(f'Error: {e}')
