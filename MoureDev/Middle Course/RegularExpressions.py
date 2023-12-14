@@ -10,7 +10,10 @@ extracción, reemplazo o validación de patrones dentro de cadenas.
 
 import re
 
-my_string_password = '#DIOSITOestaC0nm1g0*.'
-my_other_password = '#DIOSITOesta4qui*.*.'
-print(re.match("esta", my_string_password)) #match empieza a buscar desde el principio
+my_string = 'Hello my name is Leandro'
+my_other_string = 'Dios esta aqui'
+print(re.match('DIOS esta', my_other_string, re.I)) #match empieza a buscar desde el principio
+print(re.match(" ios esta", my_other_string))
 
+find_one = re.match('DIOS esta ', my_other_string, re.I)
+print(find_one.span())
