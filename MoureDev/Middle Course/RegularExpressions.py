@@ -12,8 +12,21 @@ import re
 
 my_string = 'Hello my name is Leandro'
 my_other_string = 'Dios esta aqui'
-print(re.match('DIOS esta', my_other_string, re.I)) #match empieza a buscar desde el principio
+print(re.match('Dios Esta ', my_other_string, re.I)) #match empieza a buscar desde el principio
 print(re.match(" ios esta", my_other_string))
 
-find_one = re.match('DIOS esta ', my_other_string, re.I)
-print(find_one.span())
+# find_one = re.match('DIOS esta ', my_other_string, re.I)
+find_one = re.match('DIOS esta ', my_string, re.I)
+# if not(find_one == None):
+# if find_one != None:
+if find_one is not None:
+    span = find_one.span()
+    print(type(span))
+    start, end = span
+    print(f'Se nos muestra: "{my_other_string[start:end]}"')
+else:
+    print('Termino')
+
+# search
+    
+    
