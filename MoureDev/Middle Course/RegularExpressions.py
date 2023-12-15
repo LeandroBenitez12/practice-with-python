@@ -76,3 +76,15 @@ print(re.findall(pattern, my_string)) # encuentra coincidencias con esta letra
 # Utilizamos Regex para validacion de numeros y emails ,etc
 
 # email validation Regular Expression
+
+#patterns
+#la r al inicio de patron significa que lo que sigue es un regex
+
+email = 'lean-svae9@gmail.es'
+pattern = r"^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]+$" # \. es para poner el .  $: Coincide con el final de la cadena.
+print(re.findall(pattern, email))
+print(re.search(pattern, email))
+search = re.search(pattern, email)
+if search is not None:
+    start, end = search.span()
+    print(email[start:end])
