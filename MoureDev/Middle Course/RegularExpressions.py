@@ -6,11 +6,12 @@ son secuencias de caracteres que forman un patrón de búsqueda.
 Se utilizan para buscar y manipular cadenas de texto, 
 permitiendo realizar operaciones sofisticadas de búsqueda,
 extracción, reemplazo o validación de patrones dentro de cadenas.
+Esta fuera de python , todos los lenguajes aceptan Regex
 """
 
 import re
 
-my_string = 'Hello my name is Leandro'
+my_string = 'Hello my name is Leandro, they tell me leo, but i do not like it , i like being called lean o LEAN, i am 19 years'
 my_other_string = 'Dios esta aqui'
 print(re.match('Dios Esta ', my_other_string, re.I)) #match empieza a buscar desde el principio
 print(re.match(" ios esta", my_other_string))
@@ -28,5 +29,50 @@ else:
     print('Termino')
 
 # search
-    
-    
+search = re.search('lean', my_string, re.I) # search encuentra por cualquier lugar el str
+print(search)
+print(search.span())
+s, e = search.span()
+print(f'el termino encontrado es : "{my_string[s:e]}"')
+
+# findall
+
+findall = re.findall('LEan', my_string, re.I) # nos devuelve una lista con las veces que encuentra el str en el texto
+print(findall)
+
+#split 
+print(re.split(",", my_string)) # es un patron , el cual separa segun el pattern que le demos y lo divide en diferentes elementos de una lista
+
+# sub 
+my_string = re.sub('Hello my name is', 'Hola mi nombre es', my_string)
+print(my_string) # substituye str, NO LLEVA ,re.I
+print(re.sub('leo|LEO|Leo', 'LeitodeMG', my_string)) #poner para que encuentre varias str y en caso de encontrar substituir
+print(re.sub('[L|l]eo|LEO', 'LeitodeMG', my_string)) #manera simplificada y patron
+
+
+# Patterns
+pattern = r'[Ll]ean|LEAN' #patron para dos o tres opciones
+
+print(re.findall(pattern, my_string))
+pattern = r'[0-9]' # patron para numeros de 0 a 9
+print(re.findall(pattern, my_string)) 
+
+"""
+\d: Coincide con cualquier dígito decimal (0-9).
+\D: Coincide con cualquier carácter que no sea un dígito.
+\w: Coincide con cualquier carácter alfanumérico (letras, números y guiones bajos).
+\W: Coincide con cualquier carácter que no sea alfanumérico.
+\s: Coincide con cualquier carácter de espacio en blanco (espacios, tabulaciones, saltos de línea).
+\S: Coincide con cualquier carácter que no sea un espacio en blanco.
+.: Coincide con cualquier carácter, excepto un carácter de nueva línea.
+"""
+
+pattern = r'\W' # PATRON DE BUSQUEDA DE LETRA / NUMERO, ETC
+print(re.findall(pattern, my_string))
+
+pattern = r'[lL].*' # PATRON DE BUSQUEDA DE LETRA, * desde primer letra completa todo hasta la ultima
+print(re.findall(pattern, my_string)) # encuentra coincidencias con esta letra
+
+# Utilizamos Regex para validacion de numeros y emails ,etc
+
+# email validation Regular Expression
