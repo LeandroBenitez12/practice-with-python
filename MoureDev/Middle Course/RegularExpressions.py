@@ -88,3 +88,5 @@ search = re.search(pattern, email)
 if search is not None:
     start, end = search.span()
     print(email[start:end])
+
+    # para aprender y validar REGEX -> https://regex101.com
