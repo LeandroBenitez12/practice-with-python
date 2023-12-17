@@ -25,4 +25,8 @@ import requests as rq
 response = rq.get("https://pokeapi.co/api/v2/pokemon?limit=151")
 
 print(response.status_code)
-print(response.json())
+# print(response.json())
+
+from mypackage import arithmetics
+
+print(arithmetics.sum_two_values(2,3))
